@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="day">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Branca R/S — Rover e Scolte (16–21 anni) · AGESCI Brancaleone 1</title>
+  <meta
+    name="description"
+    content="Scopri la Branca R/S del Gruppo Scout AGESCI Brancaleone 1: Noviziato e Clan/Fuoco per giovani dai 16 ai 21 anni. Strada, Comunità, Servizio e la Partenza."
+  />
+  <link rel="icon" type="image/svg+xml" href="AGESCI.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <!-- Barra di avanzamento corda -->
+  <div class="scroll-rope" aria-hidden="true">
+    <div class="scroll-rope__fill" id="scrollRopeFill"></div>
+  </div>
+
+  <a href="#contenuto-principale" class="skip-link">Salta al contenuto principale</a>
+
+  <!-- Header Istituzionale -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Gruppo Scout AGESCI Brancaleone 1 - Torna alla Home">
+        <span class="brand__emblem" aria-hidden="true">
+          <img src="AGESCI.svg" alt="" width="38" height="43" />
+        </span>
+        <span class="brand__scarf" aria-hidden="true" title="Il fazzolettone blu e rosso di Brancaleone 1">
+          <svg viewBox="0 0 44 44" width="34" height="34" fill="none">
+            <path d="M5 9C16 12.8 28 12.8 39 9L25.2 34.5C23.8 37 20.2 37 18.8 34.5L5 9Z" fill="#1E3F73" stroke="#FFFFFF" stroke-width="1.4" />
+            <path d="M9.5 11.5L25.5 31.5" stroke="#D92B3A" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M34.5 11.5L18.5 31.5" stroke="#D92B3A" stroke-width="2.5" stroke-linecap="round" />
+            <rect x="18.5" y="32" width="7" height="4.2" rx="1.6" fill="#F5C114" />
+            <path d="M19.5 36.2L17 42L21.5 39.8L22 36.2Z" fill="#1E3F73" />
+            <path d="M24.5 36.2L27 42L22.5 39.8L22 36.2Z" fill="#D92B3A" />
+          </svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__eyebrow">Gruppo Scout AGESCI</span>
+          <strong class="brand__name">Brancaleone 1</strong>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navigazione principale">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#chi-siamo" class="nav-link">Lo scoutismo e il gruppo</a>
+        <a href="branco.html" class="nav-link nav-link--lc">Branca L/C</a>
+        <a href="reparto.html" class="nav-link nav-link--eg">Branca E/G</a>
+        <a href="clan.html" class="nav-link nav-link--rs is-current" aria-current="page">Branca R/S</a>
+        <a href="index.html#contatti" class="nav-link">Contatti</a>
+        <a href="index.html#contatti" class="btn btn--red btn--sm nav-cta-mobile">Vieni a conoscerci</a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          type="button"
+          class="theme-toggle"
+          id="themeToggle"
+          aria-pressed="false"
+          title="Cambia atmosfera tra Giorno al Campo e Sera al Bivacco"
+        >
+          <span class="theme-toggle__icon" id="themeIcon" aria-hidden="true">🔥</span>
+          <span class="theme-toggle__label" id="themeLabel">Bivacco</span>
+        </button>
+
+        <a href="index.html#contatti" class="btn btn--red btn--sm hide-tablet">Vieni a conoscerci</a>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="mainNav"
+          aria-label="Apri menu di navigazione"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenuto-principale">
+    <!-- HERO DEDICATA BRANCA R/S (ROSSO) -->
+    <section class="branch-hero branch-hero--rs">
+      <div class="branch-hero__ambient" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="branch-breadcrumb" aria-label="Percorso di navigazione">
+          <a href="index.html">Home</a>
+          <span class="branch-breadcrumb__sep">/</span>
+          <a href="index.html#branche">Branche AGESCI</a>
+          <span class="branch-breadcrumb__sep">/</span>
+          <span aria-current="page">Branca R/S (16–21 anni)</span>
+        </nav>
+
+        <span class="branch-hero__badge">🔴 Branca R/S · 16–21 anni · Il Rosso Scout</span>
+        <h1 class="branch-hero__title">Rover e Scolte:<br />Strada, Comunità e Servizio</h1>
+        <div class="branch-hero__motto">“Servire”</div>
+
+        <p class="branch-hero__lead">
+          Dai 16 ai 21 anni ragazze e ragazzi vivono il tempo delle grandi scelte. Il <strong>Noviziato</strong>
+          e la comunità di <strong>Clan/Fuoco</strong> offrono uno spazio autentico per confrontarsi sui grandi
+          temi della vita, camminare zaino in spalla lungo le strade d’Italia e donarsi con generosità nel
+          servizio gratuito verso il prossimo.
+        </p>
+
+        <div class="branch-hero__meta-strip">
+          <div class="branch-hero__meta-item">
+            <span>🥾</span>
+            <span>Il Cammino: <strong>La Strada &amp; La Route</strong></span>
+          </div>
+          <div class="branch-hero__meta-item">
+            <span>🔥</span>
+            <span>La Fraternità: <strong>La Comunità di Clan/Fuoco</strong></span>
+          </div>
+          <div class="branch-hero__meta-item">
+            <span>🤲</span>
+            <span>La Scelta: <strong>Il Servizio Gratuito</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. I TRE PILASTRI DELLA BRANCA R/S -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">I cardini della maturità scout</span>
+          <h2 class="section-title">I Tre Pilastri: Strada, Comunità e Servizio</h2>
+          <p class="section-subtitle">
+            Non siamo un gruppo ricreativo né una cerchia chiusa: la Branca R/S è un laboratorio di vita
+            adulta che prepara giovani consapevoli, liberi e solidali.
+          </p>
+        </div>
+
+        <div class="branch-grid-3 reveal">
+          <article class="branch-card branch-card--rs">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🥾</div>
+            <h3>1. La Strada e la Route</h3>
+            <p>
+              Camminare per giorni zaino in spalla lungo sentieri, passi montani e borghi d’Italia.
+              La strada insegna <strong>l’essenzialità</strong>: portare solo quello che serve davvero,
+              liberarsi dal superfluo e sintonizzare il proprio passo sul compagno più stanco.
+            </p>
+            <ul>
+              <li>Fatica condivisa che unisce e crea legami indelebili</li>
+              <li>Il silenzio del deserto per ascoltare se stessi e pregare</li>
+              <li>La sosta al tramonto e la tenda montata nella semplicità</li>
+              <li>Contemplazione del creato e rispetto profondo del territorio</li>
+            </ul>
+          </article>
+
+          <article class="branch-card branch-card--rs">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🤝</div>
+            <h3>2. La Comunità</h3>
+            <p>
+              Il Clan/Fuoco è un luogo sicuro di <strong>confronto sincero tra giovani adulti</strong>.
+              Nessuno deve dimostrare di essere perfetto o indossare maschere: ci si ascolta, si condividono
+              dubbi sul futuro, sogni, fede e scelte universitarie o professionali.
+            </p>
+            <ul>
+              <li><strong>Revisione di vita:</strong> parlarsi con lealtà e affetto fraterno</li>
+              <li><strong>Coeducazione:</strong> Rover e Scolte camminano alla pari con rispetto</li>
+              <li><strong>Decisioni corali:</strong> le scelte del Clan si prendono insieme</li>
+              <li><strong>Presenza dei Capi:</strong> adulti accoglienti che consigliano con discrezione</li>
+            </ul>
+          </article>
+
+          <article class="branch-card branch-card--rs">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🤲</div>
+            <h3>3. Il Servizio</h3>
+            <p>
+              È il cuore pulsante del motto <em>«Servire»</em>. Non beneficenza una tantum, ma una dedizione
+              costante, gratuita e disinteressata verso chi è solo, malato, fragile o emarginato.
+            </p>
+            <ul>
+              <li><strong>Nel territorio:</strong> supporto agli anziani e animazione a Brancaleone</li>
+              <li><strong>Con i più fragili:</strong> centri per disabili e mense di solidarietà</li>
+              <li><strong>Nell’Associazione:</strong> aiuto-capo nei branchi e reparti del gruppo</li>
+              <li><strong>Per l’ambiente:</strong> cura dei sentieri tra costa e Aspromonte</li>
+            </ul>
+          </article>
+        </div>
+
+        <blockquote class="branch-quote-card branch-quote-card--rs reveal">
+          “La vera felicità si trova solo nel dare felicità agli altri. Cercate di lasciare questo mondo
+          un po’ migliore di come l’avete trovato e, quando la vostra ora verrà, morirete sereni pensando che
+          non avete sprecato il vostro tempo.”
+          <cite>— Dalle ultime parole di Robert Baden-Powell</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- 2. IL NOVIZIATO (16 ANNI): IL PONTE VERSO IL CLAN -->
+    <section class="section section--tinted">
+      <div class="container">
+        <div class="stereotipi-intro-grid reveal">
+          <figure class="stereotipi-banner-photo">
+            <img
+              src="../Clan info/WhatsApp Image 2026-11-01 at 9.04.26 PM (1).jpeg"
+              alt="Il Clan di Brancaleone 1 in Route a Gambarie d'Aspromonte con zaini pesanti, scarponi e Forcola"
+              width="1600"
+              height="1200"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>In Route nel Parco Nazionale dell’Aspromonte a Gambarie: zaini in spalla, Forcola e fatica condivisa!</figcaption>
+          </figure>
+
+          <div>
+            <span class="section-kicker">Il passaggio all'età giovane</span>
+            <h2 class="section-title" style="text-align: left">Il Noviziato: Un anno di sperimentazione</h2>
+            <p class="section-subtitle" style="text-align: left">
+              A 16 anni si conclude il cammino di Reparto e si apre un anno speciale: il <strong>Noviziato</strong>.
+              È il ponte che accompagna il ragazzo dall’avventura di squadriglia alla maturità del Clan.
+            </p>
+            <p>
+              Guidati dai Maestri dei Novizi, i ragazzi sperimentano per la prima volta la vera <em>Route di strada</em>,
+              si mettono alla prova con il peso dello zaino, affrontano le prime esperienze di servizio diretto
+              e imparano ad avere voce e opinione su temi etici, sociali e politici.
+            </p>
+            <div class="odoo-myth-box" style="margin-top: 1.2rem">
+              <strong class="odoo-myth-box__myth">📍 La firma della Carta di Clan:</strong>
+              <p>
+                Al termine dell’anno di Noviziato, ciascun ragazzo decide in piena libertà se chiedere di entrare
+                nella comunità di Clan/Fuoco, sottoscrivendo con gioia la <strong>Carta di Clan</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. GLI STRUMENTI DEL CAMMINO R/S -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Metodo e responsabilità</span>
+          <h2 class="section-title">Gli Strumenti Educativi della Branca R/S</h2>
+          <p class="section-subtitle">
+            Il Clan non vive alla giornata: possiede strumenti metodologici collaudati che permettono a ogni
+            Rover e Scolta di essere protagonista della propria crescita personale.
+          </p>
+        </div>
+
+        <div class="branch-grid-3 reveal">
+          <article class="branch-card branch-card--rs">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">📜</div>
+            <h3>La Carta di Clan</h3>
+            <p>
+              È il testo fondamentale della comunità, scritto, verificato e rinnovato dai ragazzi stessi.
+              Fissa le scelte comuni di <strong>fede, impegno civile, fraternità e stile di sobrietà</strong>
+              a cui ciascuno si impegna lealmente.
+            </p>
+          </article>
+
+          <article class="branch-card branch-card--rs">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🔍</div>
+            <h3>Il Capitolo</h3>
+            <p>
+              Un percorso collettivo di studio, approfondimento e testimonianza su un tema sociale rilevante
+              (es. contrasto alla criminalità organizzata, accoglienza dei migranti, tutela delle coste calabresi,
+              disagio giovanile), che si conclude sempre con un’azione concreta sul territorio.
+            </p>
+          </article>
+
+          <article class="branch-card branch-card--rs">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🎯</div>
+            <h3>Il Punto della Strada</h3>
+            <p>
+              Un momento periodico di verifica personale e intima: il singolo Rover o Scolta si confronta con
+              il Capo Clan o la Capo Fuoco sulla propria vita, sugli studi, sui sentimenti e sul cammino spirituale,
+              fissando obiettivi personali di crescita.
+            </p>
+          </article>
+        </div>
+
+        <div class="branch-grid-2 reveal" style="margin-top: 2rem;">
+          <div class="branch-card branch-card--rs">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">⚖️</div>
+            <h3>Democrazia, Pace e Cittadinanza Attiva</h3>
+            <p>
+              In Clan la democrazia si vive sul serio: assemblee, Capitoli e scelte condivise educano al dialogo,
+              al pensiero critico, all’impegno civile e alla costruzione quotidiana della pace nel territorio.
+            </p>
+          </div>
+          <div class="branch-card branch-card--rs">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🛡️</div>
+            <h3>Servizio Attivo e Protezione Civile</h3>
+            <p>
+              Collaboriamo col settore Protezione Civile AGESCI per formare giovani capaci di intervenire con competenza,
+              prevenzione e prudenza, pronti a essere utili al prossimo in ogni circostanza.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. LA PARTENZA: IL CULMINE DEL PERCORSO SCOUT -->
+    <section class="section section--tinted">
+      <div class="container">
+        <div class="stereotipi-intro-grid reveal">
+          <div>
+            <span class="section-kicker">Il traguardo e il vero inizio</span>
+            <h2 class="section-title" style="text-align: left">La Partenza: Cittadini attivi del mondo</h2>
+            <p class="section-subtitle" style="text-align: left">
+              Attorno ai 20–21 anni, al termine del cammino di Clan, il Rover e la Scolta vivono il momento più
+              emozionante e solenne dell'intero percorso scout: <strong>La Partenza</strong>.
+            </p>
+            <p>
+              Non è una laurea né un addio triste: è la testimonianza che lo scautismo ha compiuto la sua missione
+              educativa. Con la Partenza, il giovane dichiara davanti alla comunità riunita di aver fatto propri
+              i valori della <strong>Fede</strong>, della <strong>Scelta Politica (cittadinanza attiva)</strong> e
+              dello <strong>Stile del Servizio</strong>, impegnandosi a viverli da adulto nella professione, nella
+              famiglia e nella società civile.
+            </p>
+            <div class="odoo-quote-callout" style="margin-top: 1.2rem">
+              “Scout una volta, scout per sempre: chi prende la Partenza porta nel mondo lo sguardo fiero, la
+              mano tesa verso i deboli e la capacità di non arrendersi mai di fronte alle ingiustizie.”
+            </div>
+          </div>
+
+          <figure class="stereotipi-banner-photo">
+            <img
+              src="../Clan info/WhatsApp Image 2026-11-01 at 9.04.26 PM (2).jpeg"
+              alt="Rover del Clan AGESCI Brancaleone 1 in chiesa con il fazzolettone blu e rosso e la Forcola di legno"
+              width="1600"
+              height="900"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>La Forcola di legno e il nostro fazzolettone blu e rosso: simboli di scelte mature di fede, servizio e comunità.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. GALLERIA FOTOGRAFICA COMPLETA DI BRANCA R/S (TUTTE LE 6 FOTO REALI DEL CLAN) -->
+    <section class="section" id="galleria-clan">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Il nostro album R/S · 100% autentico</span>
+          <h2 class="section-title">6 scatti veri di Strada, Comunità e Fraternità</h2>
+          <p class="section-subtitle">
+            Dai sentieri di Gambarie d’Aspromonte ai momenti di verifica attorno alla Carta di Clan e alla Forcola. Tocca una foto per ingrandirla!
+          </p>
+        </div>
+
+        <div class="photo-gallery photo-gallery--branch">
+          <figure class="gallery-item reveal" data-category="rs">
+            <button
+              type="button"
+              class="gallery-item__btn"
+              data-title="Route in Aspromonte a Gambarie"
+              data-desc="Zaini pesanti in spalla, scarponi ai piedi e la Forcola del Clan davanti alla scritta Gambarie nel Parco Nazionale dell’Aspromonte."
+            >
+              <span class="gallery-item__tag">🔴 La Strada</span>
+              <img src="../Clan info/WhatsApp Image 2026-11-01 at 9.04.26 PM (1).jpeg" alt="Il Clan di Brancaleone 1 con zaini e Forcola a Gambarie d'Aspromonte" width="1600" height="1200" loading="lazy" decoding="async" />
+              <span class="gallery-item__overlay"><strong>Route in Aspromonte · Gambarie</strong><small>Ingrandisci 🔍</small></span>
+            </button>
+          </figure>
+
+          <figure class="gallery-item reveal" data-category="rs">
+            <button
+              type="button"
+              class="gallery-item__btn"
+              data-title="Sosta sulla Strada al Tramonto"
+              data-desc="Seduti sul muretto lungo il cammino nella luce calda della sera: la fatica della strada si trasforma sempre in amicizia vera."
+            >
+              <span class="gallery-item__tag">🔴 In Cammino</span>
+              <img src="../Clan info/WhatsApp Image 2026-11-01 at 9.04.27 PM.jpeg" alt="Rover in uniforme e scarponi seduti sul muretto lungo la strada al tramonto" width="1200" height="1600" loading="lazy" decoding="async" />
+              <span class="gallery-item__overlay"><strong>Sosta al Tramonto lungo la Strada</strong><small>Ingrandisci 🔍</small></span>
+            </button>
+          </figure>
+
+          <figure class="gallery-item reveal" data-category="rs">
+            <button
+              type="button"
+              class="gallery-item__btn"
+              data-title="Fede, Forcola e Fazzolettone Blu-Rosso"
+              data-desc="Riuniti in chiesa durante un incontro di Zona: le due fettucce rosse incrociate sul fazzolettone blu e la Forcola del bivio R/S."
+            >
+              <span class="gallery-item__tag">🔴 Fede &amp; Scelte</span>
+              <img src="../Clan info/WhatsApp Image 2026-11-01 at 9.04.26 PM (2).jpeg" alt="Rover di spalle in chiesa col fazzolettone blu-rosso e la Forcola" width="1600" height="900" loading="lazy" decoding="async" />
+              <span class="gallery-item__overlay"><strong>Forcola &amp; Fazzolettone in Chiesa</strong><small>Ingrandisci 🔍</small></span>
+            </button>
+          </figure>
+
+          <figure class="gallery-item reveal" data-category="rs">
+            <button
+              type="button"
+              class="gallery-item__btn"
+              data-title="Attorno alla Carta di Clan e alla Forcola"
+              data-desc="Momento di raccoglimento, lettura e confronto comunitario in cerchio attorno alla Forcola di legno."
+            >
+              <span class="gallery-item__tag">🔴 Carta di Clan</span>
+              <img src="../Clan info/WhatsApp Image 2026-11-01 at 9.04.27 PM (1).jpeg" alt="Quattro Rover in cerchio che leggono insieme attorno alla Forcola" width="948" height="1146" loading="lazy" decoding="async" />
+              <span class="gallery-item__overlay"><strong>Confronto attorno alla Forcola</strong><small>Ingrandisci 🔍</small></span>
+            </button>
+          </figure>
+
+          <figure class="gallery-item reveal" data-category="rs">
+            <button
+              type="button"
+              class="gallery-item__btn"
+              data-title="Comunità a Tavola e la Forcola Rossa"
+              data-desc="Pranzo condiviso all’aria aperta con i compagni di cammino e la Forcola vestita del rosso della Branca R/S."
+            >
+              <span class="gallery-item__tag">🔴 Comunità</span>
+              <img src="../Clan info/WhatsApp Image 2026-11-01 at 9.04.26 PM.jpeg" alt="Selfie sorridente del Clan a tavola all'aperto con la Forcola rossa" width="1600" height="1200" loading="lazy" decoding="async" />
+              <span class="gallery-item__overlay"><strong>Comunità a Tavola &amp; Forcola Rossa</strong><small>Ingrandisci 🔍</small></span>
+            </button>
+          </figure>
+
+          <figure class="gallery-item reveal" data-category="rs">
+            <button
+              type="button"
+              class="gallery-item__btn"
+              data-title="Gioia Fraterna nella Zona Terra del Bergamotto"
+              data-desc="Sorrisi tra Rover e Capi dopo le attività nella nostra Zona AGESCI Terra del Bergamotto: anche la convivialità fa comunità!"
+            >
+              <span class="gallery-item__tag">🔴 Fraternità</span>
+              <img src="../Clan info/WhatsApp Image 2026-11-01 at 9.04.27 PM (2).jpeg" alt="Momento conviviale del Clan con fazzolettone blu-rosso e magliette Zona Terra del Bergamotto" width="1200" height="1599" loading="lazy" decoding="async" />
+              <span class="gallery-item__overlay"><strong>Sorrisi · Zona Terra del Bergamotto</strong><small>Ingrandisci 🔍</small></span>
+            </button>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. COME PARTECIPARE & TRASPARENZA COSTI -->
+    <section class="section section--tinted">
+      <div class="container" style="max-width: 820px; text-align: center">
+        <div class="reveal">
+          <span class="section-kicker">Uno spazio per il tuo futuro</span>
+          <h2 class="section-title">Vieni a conoscere la comunità di Clan/Fuoco!</h2>
+          <p class="section-subtitle" style="margin-inline: auto">
+            Se hai tra i <strong>16 e i 21 anni</strong> e cerchi un gruppo vero con cui condividere ideali,
+            viaggi a piedi nella natura e progetti concreti di servizio sul territorio di Brancaleone,
+            mettiti in contatto con noi! C'è sempre posto per chi vuole mettersi in gioco.
+          </p>
+
+          <p class="cost-note" style="max-width: 680px; margin: 1.5rem auto">
+            <span aria-hidden="true">ℹ️</span>
+            <span>
+              <strong>Crescere insieme non dovrebbe essere un privilegio:</strong> è previsto il censimento annuale
+              (quota associativa AGESCI + assicurazione); non sono previste quote mensili. Le Route e le attività
+              vengono gestite con <strong>iniziative di autofinanziamento</strong> affinché nessun giovane sia escluso per ragioni
+              economiche. La cosa più importante è la voglia di mettersi in gioco!
+            </span>
+          </p>
+          <div class="schedule-callout" style="max-width: 680px; margin: 1rem auto; padding: 1rem; border-radius: 12px; background: rgba(200, 35, 51, 0.12); border: 1px solid rgba(200, 35, 51, 0.3); font-size: 0.9rem; text-align: left;">
+            <strong>🗓️ Il nostro ritmo di Clan:</strong>
+            <ul style="margin: 0.4rem 0 0 1.2rem; line-height: 1.5;">
+              <li><strong>Incontri settimanali:</strong> il sabato pomeriggio e riunioni di Clan su progetti e Capitolo.</li>
+              <li><strong>Domenica:</strong> Santa Messa comunitaria alternandosi nelle due parrocchie di Brancaleone.</li>
+              <li><strong>Servizio &amp; Route:</strong> servizio continuativo verso il territorio, uscite periodiche e Route estiva di cammino zaino in spalla.</li>
+            </ul>
+          </div>
+
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.8rem">
+            <a href="index.html#contatti" class="btn btn--red btn--lg">Vieni a conoscere il nostro gruppo</a>
+            <a
+              href="https://www.instagram.com/agescibrancaleone1?utm_source=ig_web_button_share_sheet&amp;vrfl=ZDNlZDc0MzIxNw=="
+              class="btn btn--outline btn--lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >📸 Instagram</a>
+            <a
+              href="https://www.facebook.com/p/Agesci-Brancaleone-1-100078887537538/"
+              class="btn btn--outline btn--lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >📘 Facebook</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. STRISCIA DI NAVIGAZIONE INCROCIATA TRA BRANCHE -->
+    <section class="branch-nav-strip">
+      <div class="container">
+        <div class="branch-nav-strip__header reveal">
+          <span class="section-kicker">Il cammino continua</span>
+          <h3>Scopri le altre branche del Gruppo Brancaleone 1</h3>
+          <p>Dall'infanzia alla giovinezza, ogni età ha la sua avventura dedicata:</p>
+        </div>
+
+        <div class="branch-nav-strip__grid reveal">
+          <a href="branco.html" class="branch-nav-strip__card branch-nav-strip__card--lc">
+            <span class="branch-nav-strip__icon" aria-hidden="true">🟡</span>
+            <div class="branch-nav-strip__body">
+              <strong>Branca L/C · Il Branco dei Lupetti (8–11 anni)</strong>
+              <span>Il nostro Branco Waingunga per bambini e bambine: gioco, fantasia e storie della Giungla per fare del proprio meglio.</span>
+            </div>
+            <span class="branch-nav-strip__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="reparto.html" class="branch-nav-strip__card branch-nav-strip__card--eg">
+            <span class="branch-nav-strip__icon" aria-hidden="true">🟢</span>
+            <div class="branch-nav-strip__body">
+              <strong>Branca E/G · Reparto (11–16 anni)</strong>
+              <span>Esploratori e Guide: costruzioni, tenda, nodi, fuochi e grandi imprese di squadriglia.</span>
+            </div>
+            <span class="branch-nav-strip__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Istituzionale -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <strong>Dove Siamo</strong>
+          <p>Gruppo Scout AGESCI Brancaleone 1<br />Brancaleone (RC) · Calabria</p>
+        </div>
+
+        <div class="footer-logo-center">
+          <span class="footer-emblem-wrap">
+            <img src="AGESCI.svg" alt="Emblema ufficiale AGESCI" width="52" height="60" loading="lazy" />
+          </span>
+          <strong>AGESCI Brancaleone 1</strong>
+          <span>“Lasciare il mondo un po’ migliore di quanto l’abbiamo trovato.”</span>
+        </div>
+
+        <div class="footer-col footer-col--right">
+          <strong>Contatti &amp; Social</strong>
+          <p>
+            WhatsApp Branco: <a href="https://wa.me/393486533309" target="_blank" rel="noopener noreferrer">+39 348 653 3309</a><br />
+            WhatsApp Reparto: <a href="https://wa.me/393332547995" target="_blank" rel="noopener noreferrer">+39 333 254 7995</a><br />
+            <a href="https://www.instagram.com/agescibrancaleone1?utm_source=ig_web_button_share_sheet&amp;vrfl=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram</a>
+            ·
+            <a href="https://www.facebook.com/p/Agesci-Brancaleone-1-100078887537538/" target="_blank" rel="noopener noreferrer">Facebook</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© Gruppo Scout AGESCI Brancaleone 1 · Associazione Guide e Scouts Cattolici Italiani</span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#chi-siamo">Il nostro gruppo</a>
+          <a href="branco.html">Branca L/C</a>
+          <a href="reparto.html">Branca E/G</a>
+          <a href="clan.html">Branca R/S</a>
+          <a href="index.html#contatti">Contatti</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Nativo <dialog> per le 6 foto del Clan -->
+  <dialog class="lightbox" id="photoLightbox" aria-label="Visualizzazione foto ingrandita">
+    <div class="lightbox__content">
+      <button type="button" class="lightbox__close" id="lightboxClose" aria-label="Chiudi foto">✕</button>
+      <div class="lightbox__stage">
+        <button type="button" class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Foto precedente">‹</button>
+        <img id="lightboxImg" src="" alt="" />
+        <button type="button" class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Foto successiva">›</button>
+      </div>
+      <div class="lightbox__caption-bar">
+        <span class="lightbox__counter" id="lightboxCounter">Foto 1 di 6</span>
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxDesc"></p>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>

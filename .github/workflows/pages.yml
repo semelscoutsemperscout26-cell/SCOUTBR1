@@ -1,0 +1,82 @@
+name: Deploy Sito AGESCI Brancaleone 1 su GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      build_type: ${{ steps.check_pages.outputs.build_type }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Prepara pacchetto statico completo
+        run: |
+          mkdir -p _site
+          cp -r "codice" "branco info" "Reparto info" "Clan info" _site/
+          touch _site/.nojekyll
+          cat << 'EOF' > _site/index.html
+          <!DOCTYPE html>
+          <html lang="it">
+          <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <title>Gruppo Scout AGESCI Brancaleone 1</title>
+            <meta http-equiv="refresh" content="0; url=codice/index.html" />
+            <link rel="canonical" href="codice/index.html" />
+            <script>window.location.replace("codice/index.html");</script>
+          </head>
+          <body>
+            <p>Reindirizzamento al sito <a href="codice/index.html">AGESCI Brancaleone 1</a>...</p>
+          </body>
+          </html>
+          EOF
+
+      - name: Verifica attivazione GitHub Pages
+        id: check_pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BUILD_TYPE=$(gh api "/repos/${{ github.repository }}/pages" --jq '.build_type' 2>/dev/null || echo "disabled")
+          echo "build_type=$BUILD_TYPE" >> "$GITHUB_OUTPUT"
+          if [ "$BUILD_TYPE" != "workflow" ]; then
+            echo "### ℹ️ Attiva GitHub Pages per pubblicare il sito" >> "$GITHUB_STEP_SUMMARY"
+            echo "1. Vai su **Settings → Pages** del repository." >> "$GITHUB_STEP_SUMMARY"
+            echo "2. Sotto **Source**, seleziona **GitHub Actions**." >> "$GITHUB_STEP_SUMMARY"
+            echo "3. Torna su **Actions → Deploy Sito AGESCI Brancaleone 1 su GitHub Pages → Run workflow**." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Configura GitHub Pages
+        if: steps.check_pages.outputs.build_type == 'workflow'
+        uses: actions/configure-pages@v5
+
+      - name: Carica artefatto Pages
+        if: steps.check_pages.outputs.build_type == 'workflow'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_site"
+
+  deploy:
+    if: needs.build.outputs.build_type == 'workflow'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Pubblica su GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

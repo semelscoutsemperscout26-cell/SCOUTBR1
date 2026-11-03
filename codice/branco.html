@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="day">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Il Branco Waingunga — Lupetti (8–11 anni) · AGESCI Brancaleone 1</title>
+  <meta
+    name="description"
+    content="Scopri il Branco Waingunga del Gruppo Scout AGESCI Brancaleone 1: gioco, fantasia e vita di Branco per bambini e bambine dagli 8 agli 11 anni, tutti insieme come Lupetti. Del nostro meglio!"
+  />
+  <link rel="icon" type="image/svg+xml" href="AGESCI.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <!-- Barra di avanzamento corda -->
+  <div class="scroll-rope" aria-hidden="true">
+    <div class="scroll-rope__fill" id="scrollRopeFill"></div>
+  </div>
+
+  <a href="#contenuto-principale" class="skip-link">Salta al contenuto principale</a>
+
+  <!-- Header Istituzionale -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Gruppo Scout AGESCI Brancaleone 1 - Torna alla Home">
+        <span class="brand__emblem" aria-hidden="true">
+          <img src="AGESCI.svg" alt="" width="38" height="43" />
+        </span>
+        <span class="brand__scarf" aria-hidden="true" title="Il fazzolettone blu e rosso di Brancaleone 1">
+          <svg viewBox="0 0 44 44" width="34" height="34" fill="none">
+            <path d="M5 9C16 12.8 28 12.8 39 9L25.2 34.5C23.8 37 20.2 37 18.8 34.5L5 9Z" fill="#1E3F73" stroke="#FFFFFF" stroke-width="1.4" />
+            <path d="M9.5 11.5L25.5 31.5" stroke="#D92B3A" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M34.5 11.5L18.5 31.5" stroke="#D92B3A" stroke-width="2.5" stroke-linecap="round" />
+            <rect x="18.5" y="32" width="7" height="4.2" rx="1.6" fill="#F5C114" />
+            <path d="M19.5 36.2L17 42L21.5 39.8L22 36.2Z" fill="#1E3F73" />
+            <path d="M24.5 36.2L27 42L22.5 39.8L22 36.2Z" fill="#D92B3A" />
+          </svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__eyebrow">Gruppo Scout AGESCI</span>
+          <strong class="brand__name">Brancaleone 1</strong>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navigazione principale">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#chi-siamo" class="nav-link">Lo scoutismo e il gruppo</a>
+        <a href="branco.html" class="nav-link nav-link--lc is-current" aria-current="page">Branca L/C</a>
+        <a href="reparto.html" class="nav-link nav-link--eg">Branca E/G</a>
+        <a href="clan.html" class="nav-link nav-link--rs">Branca R/S</a>
+        <a href="index.html#contatti" class="nav-link">Contatti</a>
+        <a href="index.html#contatti" class="btn btn--red btn--sm nav-cta-mobile">Vieni a conoscerci</a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          type="button"
+          class="theme-toggle"
+          id="themeToggle"
+          aria-pressed="false"
+          title="Cambia atmosfera tra Giorno al Campo e Sera al Bivacco"
+        >
+          <span class="theme-toggle__icon" id="themeIcon" aria-hidden="true">🔥</span>
+          <span class="theme-toggle__label" id="themeLabel">Bivacco</span>
+        </button>
+
+        <a href="index.html#contatti" class="btn btn--red btn--sm hide-tablet">Vieni a conoscerci</a>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="mainNav"
+          aria-label="Apri menu di navigazione"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenuto-principale">
+    <!-- HERO DEDICATA BRANCA L/C (GIALLO) -->
+    <section class="branch-hero branch-hero--lc">
+      <div class="branch-hero__ambient" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="branch-breadcrumb" aria-label="Percorso di navigazione">
+          <a href="index.html">Home</a>
+          <span class="branch-breadcrumb__sep">/</span>
+          <a href="index.html#branche">Branche AGESCI</a>
+          <span class="branch-breadcrumb__sep">/</span>
+          <span aria-current="page">Branca L/C (8–11 anni)</span>
+        </nav>
+
+        <span class="branch-hero__badge">🟡 Branca L/C · 8–11 anni · Branco Waingunga</span>
+        <h1 class="branch-hero__title">Il Branco dei Lupetti:<br />Gioco, Fantasia e Scoperta</h1>
+        <div class="branch-hero__motto">“Del nostro meglio!”</div>
+
+        <p class="branch-hero__lead">
+          Nel nostro <strong>Branco Waingunga</strong> sia i bambini sia le bambine dagli 8 agli 11 anni sono
+          <strong>Lupetti</strong>! Attraverso il grande gioco, i racconti della Giungla di Seeonee
+          e le Vacanze di Branco, crescono insieme alla pari, imparano ad accogliere chi viene da lontano e conquistano con gioia le
+          loro prime autonomie nel territorio di <strong>Brancaleone</strong>.
+        </p>
+
+        <div class="branch-hero__meta-strip">
+          <div class="branch-hero__meta-item">
+            <span>🐾</span>
+            <span>Unità a Brancaleone: <strong>Branco Waingunga (Misto)</strong></span>
+          </div>
+          <div class="branch-hero__meta-item">
+            <span>🌿</span>
+            <span>Ambiente Fantastico: <strong>La Giungla di Seeonee</strong></span>
+          </div>
+          <div class="branch-hero__meta-item">
+            <span>🐺</span>
+            <span>Comunità fraterna: <strong>La Famiglia Felice</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. L'AMBIENTE FANTASTICO: LA GIUNGLA DEL BRANCO -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">La pedagogia dell’avventura per i più piccoli</span>
+          <h2 class="section-title">L’Ambiente Fantastico: Giocare sul serio per crescere</h2>
+          <p class="section-subtitle">
+            A questa età non si fanno discorsi teorici: si gioca! Nel nostro Branco bambini e bambine sono tutti
+            Lupetti e attraverso l’ambiente della Giungla scoprono valori profondi divertendosi e sperimentando la fiducia.
+          </p>
+        </div>
+
+        <div class="branch-grid-3 reveal">
+          <article class="branch-card branch-card--lc">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🐺</div>
+            <h3>Il Branco e i Racconti della Giungla</h3>
+            <p>
+              Ispirato a <em>Le storie di Mowgli</em> di Rudyard Kipling. Il cucciolo d’uomo viene
+              accolto dal Popolo Libero e impara le <strong>Parole Maestre</strong> della vita insieme:
+              lealtà, coraggio, rispetto delle regole della Giungla e amicizia sincera.
+            </p>
+            <ul>
+              <li><strong>Akela:</strong> il vecchio lupo che guida il Branco con saggezza</li>
+              <li><strong>Baloo:</strong> l’orso maestro affettuoso della Legge</li>
+              <li><strong>Bagheera:</strong> la pantera forte che insegna l’agilità e il rispetto</li>
+              <li><strong>Kaa &amp; Chil:</strong> lo sguardo lungo, la memoria e la prudenza</li>
+            </ul>
+          </article>
+
+          <article class="branch-card branch-card--lc">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🐾</div>
+            <h3>Bambini e Bambine insieme come Lupetti</h3>
+            <p>
+              Nel Gruppo <strong>Brancaleone 1</strong> sia i maschi sia le femmine dagli 8 agli 11 anni vivono
+              insieme come <strong>Lupetti</strong> nel Branco Waingunga, indossando con fierezza il cappellino
+              verde a spicchi gialli e il fazzolettone blu e rosso.
+            </p>
+            <ul>
+              <li><strong>Coeducazione fin da piccoli:</strong> giocare e collaborare alla pari</li>
+              <li><strong>Le Grandi Cacce:</strong> uscite, scoperte nella natura e giochi di pista</li>
+              <li><strong>Mani Abili:</strong> creatività manuale, canti, espressione e fantasia</li>
+              <li><strong>Il Fiore Rosso:</strong> la gioia dei racconti e dei canti attorno al fuoco</li>
+            </ul>
+          </article>
+
+          <article class="branch-card branch-card--lc">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🪵</div>
+            <h3>La Rupe del Consiglio</h3>
+            <p>
+              È il momento solenne attorno al Totem del Branco dove ci si siede tutti insieme per parlare a cuore aperto.
+              Tutti i lupetti — bambini e bambine — hanno diritto di parola e vengono ascoltati in silenzio dai
+              compagni e dai Vecchi Lupi (i Capi).
+            </p>
+            <ul>
+              <li>Nessun bambino viene interrotto o giudicato</li>
+              <li>Si impara ad ascoltare il punto di vista degli altri</li>
+              <li>Si festeggiano insieme le conquiste di ciascuno</li>
+              <li>Si canta e si fa festa come vera <em>Famiglia Felice</em></li>
+            </ul>
+          </article>
+        </div>
+
+        <blockquote class="branch-quote-card branch-quote-card--lc reveal">
+          “Il gioco è il respiro naturale del bambino: attraverso il gioco delle regole condivise,
+          il bambino sperimenta la libertà e impara a donare il proprio meglio a tutta la comunità.”
+          <cite>— Robert Baden-Powell, Fondatore dello Scautismo</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- 2. LEGGE E PROMESSA DEL LUPETTO -->
+    <section class="section section--tinted">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">I valori a misura di bambino</span>
+          <h2 class="section-title">La Legge del Branco e la Promessa del Lupetto</h2>
+          <p class="section-subtitle">
+            Poche parole chiare, positive e indimenticabili che accompagnano i nostri lupetti nel cammino
+            quotidiano a casa, a scuola e nelle attività di Branco a Brancaleone.
+          </p>
+        </div>
+
+        <div class="branch-grid-2 reveal">
+          <div class="branch-law-card branch-law-card--lc">
+            <span class="branch-hub-card__tag">La Legge del Branco</span>
+            <h3>Le Regole del Popolo Libero</h3>
+            <ol>
+              <li>
+                <strong>Il Lupetto pensa agli altri come a se stesso;</strong><br />
+                <small>Accogliere tutti, fare squadra senza escludere nessuno e aiutare chi è in difficoltà.</small>
+              </li>
+              <li>
+                <strong>Il Lupetto vive con gioia e lealtà insieme al Branco!</strong><br />
+                <small>Ascoltare i Vecchi Lupi, dire sempre la verità, non cedere ai capricci e affrontare ogni avventura col sorriso.</small>
+              </li>
+            </ol>
+          </div>
+
+          <div class="branch-law-card branch-law-card--lc">
+            <span class="branch-hub-card__tag">La Promessa del Lupetto</span>
+            <h3>La Scelta Personale del Bambino</h3>
+            <p>
+              Pronunciata liberamente davanti a tutto il Branco riunito, con due dita tese nel saluto
+              del Lupetto a rappresentare le due orecchie dritte del lupo pronte all’ascolto:
+            </p>
+            <p>
+              <em>
+                “Prometto, con l’aiuto e l’esempio di Gesù, di fare del mio meglio nel migliorare me stesso,
+                nell’aiutare gli altri, nell’osservare la Legge del Branco.”
+              </em>
+            </p>
+            <p>
+              <strong>Cosa significa «Del nostro meglio»?</strong> Non chiediamo a nessun bambino di
+              essere perfetto: chiediamo di mettercela tutta con impegno, sincerità e cuore allegro!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PROGRESSIONE PERSONALE E SPECIALITÀ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Crescere passo dopo passo</span>
+          <h2 class="section-title">La Pista del Lupetto: Zampe, Prede e Specialità</h2>
+          <p class="section-subtitle">
+            Ogni lupetto è unico: ha talenti diversi, ritmi diversi e passioni proprie. La pista personale
+            nel Branco valorizza le qualità di ciascun bambino e bambina senza mai metterli in competizione.
+          </p>
+        </div>
+
+        <div class="branch-grid-3 reveal">
+          <article class="branch-card branch-card--lc">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🐾</div>
+            <h3>Dal Cucciolo alle Zampe</h3>
+            <p>
+              La pista comincia come <em>Cucciolo</em> fino alla Promessa (<em>Zampa Tenera</em>), per poi conquistare la
+              <strong>Prima Zampa</strong> (aprire gli occhi e scoprire la vita del Branco), la <strong>Seconda Zampa</strong>
+              (rendersi abili e autonomi) e la <strong>Terza Zampa</strong> (aiutare i più piccoli ed essere d’esempio).
+            </p>
+          </article>
+
+          <article class="branch-card branch-card--lc">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🎯</div>
+            <h3>Le Prede personali</h3>
+            <p>
+              La «Preda» è un piccolo impegno concreto concordato col Capo (es. tenere in ordine la propria
+              cameretta, aiutare un compagno timido a scuola, imparare ad allacciarsi le scarpe da solo).
+              Conquistarla dona un'immensa autostima al bambino!
+            </p>
+          </article>
+
+          <article class="branch-card branch-card--lc">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🏅</div>
+            <h3>Le Specialità L/C</h3>
+            <p>
+              Distintivi triangolari cuciti sulla manica della camicia azzurra che premiano una capacità
+              sviluppata con dedizione:
+            </p>
+            <ul>
+              <li><strong>Mani Abili:</strong> disegno, piccoli lavoretti con legno e carta</li>
+              <li><strong>Amico degli Animali &amp; Natura:</strong> cura del cane, delle piante</li>
+              <li><strong>Cantore &amp; Animatore:</strong> canti, chitarra, bans di festa</li>
+              <li><strong>Atleta &amp; Pronto Soccorso:</strong> destrezza, igiene e cura</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. VITA INSIEME: LA TANA, LA SESTIGLIA E LE VACANZE DI BRANCO -->
+    <section class="section section--tinted">
+      <div class="container">
+        <div class="stereotipi-intro-grid reveal">
+          <figure class="stereotipi-banner-photo">
+            <img
+              src="../branco info/WhatsApp Image 2026-11-01 at 11.05.29 PM (4).jpeg"
+              alt="I Lupetti e i Vecchi Lupi del Branco Waingunga nella Tana decorata con lo striscione Un Popolo Libero"
+              width="1600"
+              height="1200"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Sorrisi nella nostra Tana decorata come la Giungla: «Un Popolo Libero» dove ciascuno è accolto per nome!</figcaption>
+          </figure>
+
+          <div>
+            <span class="section-kicker">La vita comunitaria nel Branco Waingunga</span>
+            <h2 class="section-title" style="text-align: left">La Tana, la Sestiglia e le Vacanze di Branco</h2>
+            <p class="section-subtitle" style="text-align: left">
+              Nel nostro <strong>Branco Waingunga</strong> i bambini non sono mai numeri: vivono nella <strong>Tana</strong>
+              e sono divisi in <strong>Sestiglie</strong> (gruppetti di 5–6 lupetti contrassegnati dai colori del manto dei lupi:
+              Neri, Bianchi, Grigi, Pezzati, Fulvi).
+            </p>
+            <p>
+              In Sestiglia i più grandi (Capi Sestiglia e Vice) imparano a prendersi cura con dolcezza dei cuccioli
+              appena arrivati. Si preparano i giochi, si canta insieme e si impara a vincere o a perdere sempre con lealtà e sorriso.
+            </p>
+            <div class="odoo-myth-box" style="margin-top: 1.2rem">
+              <strong class="odoo-myth-box__myth">🏕️ Le Vacanze di Branco (VdB) estive:</strong>
+              <p>
+                Un’esperienza estiva vissuta insieme in casa di caccia tra boschi e natura! Per molti bambini
+                è la prima avventura serena lontano da mamma e papà: si torna a casa cresciuti, autonomi e con nuovi fratelli nel cuore.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ESTATE 2025: L'ACCOGLIENZA DEGLI SCOUT UCRAINI (ESCLUSIVA NELLA PAGINA DEL BRANCO) -->
+    <section class="section" id="ospitalita-ucraina">
+      <div class="container">
+        <div class="ukraine-feature-box reveal">
+          <span class="branch-hub-card__tag" style="background: rgba(37, 99, 235, 0.14); color: #1d4ed8;">
+            🇺🇦 🇮🇹 Estate 2025 · La fratellanza scout non conosce confini
+          </span>
+          <h2 class="section-title" style="text-align: left; margin-top: 0.4rem;">
+            Accoglienza degli scout ucraini a Brancaleone
+          </h2>
+          <p class="experience-card__lead" style="margin-bottom: 1rem;">
+            “La fratellanza scout non conosce confini.”
+          </p>
+          <p style="font-size: 1rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 0.9rem;">
+            Nell’<strong>estate del 2025 abbiamo accolto a Brancaleone due unità scout provenienti da due diverse città ucraine</strong>,
+            offrendo ai loro ragazzi la possibilità di vivere un’esperienza di campo che la guerra avrebbe altrimenti reso impossibile.
+          </p>
+          <p style="font-size: 0.98rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 0.9rem;">
+            Non si è trattato soltanto di organizzare un’accoglienza. Abbiamo camminato insieme, costruito relazioni e condiviso un
+            percorso di preparazione durante l’anno, trasformando un’esperienza di ospitalità in una <strong>vera occasione di incontro</strong>.
+            Per i nostri lupetti è stato un esercizio concreto di carità, cittadinanza attiva ed educazione alla pace: un’opportunità
+            per uscire dal proprio punto di vista, conoscere la realtà di chi è stato ferito dalla guerra e imparare a farsi vicini
+            a chi vive situazioni di fragilità.
+          </p>
+          <p style="font-size: 0.98rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 1rem;">
+            Abbiamo parlato lingue diverse, ma condiviso un linguaggio comune: quello dello scoutismo, fatto di servizio, avventura,
+            fiducia e fratellanza. Perché la pace non è soltanto un valore da proclamare: è una scelta che si costruisce ogni giorno,
+            attraverso gesti concreti di accoglienza, solidarietà e amicizia.
+          </p>
+          <div class="experience-card__quote" style="margin-bottom: 0.4rem;">
+            “Abbiamo aperto le porte delle nostre tende, ma soprattutto abbiamo imparato ad aprire il cuore.”
+          </div>
+
+          <div class="ukraine-photos-duo">
+            <figure>
+              <img
+                src="../branco info/WhatsApp Image 2026-11-01 at 11.05.29 PM (1).jpeg"
+                alt="Lupetti AGESCI Brancaleone 1 col Totem del Branco accanto agli scout ucraini in uniforme davanti all'altare"
+                width="1600"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Uniti in chiesa davanti all’altare: le uniformi azzurre AGESCI con il Totem del Branco accanto alle uniformi degli scout ucraini.</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../branco info/WhatsApp Image 2026-11-01 at 11.05.29 PM (3).jpeg"
+                alt="Foto di gruppo estiva dei Lupetti di Brancaleone 1 con i ragazzi ucraini e la bandiera dell'Ucraina"
+                width="1600"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Sotto la stessa tenda con la bandiera dell’Ucraina: amicizia vera che supera ogni confine.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. GALLERIA FOTOGRAFICA COMPLETA DEL BRANCO L/C (TUTTE LE 9 FOTO REALI) -->
+    <section class="section section--tinted" id="galleria-branco">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Il nostro album L/C · 100% autentico</span>
+          <h2 class="section-title">9 scatti veri del nostro Branco Waingunga</h2>
+          <p class="section-subtitle">
+            Dalla Tana alla vista sul mare Jonio, fino alle giornate indimenticabili vissute insieme agli amici scout ucraini. Tocca qualsiasi foto per ingrandirla!
+          </p>
+          <div class="gallery-filters" role="group" aria-label="Filtra le foto del Branco">
+            <button type="button" class="filter-chip is-active" data-filter="all">Tutte (9)</button>
+            <button type="button" class="filter-chip" data-filter="tana">Branco Waingunga &amp; Tana (2)</button>
+            <button type="button" class="filter-chip" data-filter="ucraina">Con gli Scout Ucraini 🇺🇦 (7)</button>
+          </div>
+        </div>
+
+        <div class="photo-gallery photo-gallery--branch">
+          <figure class="gallery-item reveal" data-category="tana">
+            <button
+              type="button"
+              class="gallery-item__btn"
+              data-title="Branco Waingunga davanti al Mare Jonio"
+              data-desc="Le lupette con la maglietta gialla del Branco Waingunga (Famiglia Felice · Brancaleone 1) affacciate sull’azzurro del nostro mare."
+            >
+              <span class="gallery-item__tag">🟡 Branco Waingunga</span>
+              <img src="../branco info/WhatsApp Image 2026-11-01 at 11.05.29 PM (5).jpeg" alt="Lupette con maglietta gialla Branco Waingunga affacciate sul mare Jonio" width="1600" height="1200" loading="lazy" decoding="async" />
+              <span class="gallery-item__overlay"><strong>Sguardo sul Mare · Branco Waingunga</strong><small>Ingrandisci 🔍</small></span>
+            </button>
+          </figure>
+
+          <figure class="gallery-item reveal" data-category="tana">
+            <button
+              type="button"
+              class="gallery-item__btn"
+              data-title="Nella Tana del Branco: «Un Popolo Libero»"
+              data-desc="I Lupetti e i Vecchi Lupi riuniti con gioia nella Tana di Brancaleone 1 tra le decorazioni della Giungla."
+            >
+              <span class="gallery-item__tag">🟡 Vita in Tana</span>
+              <img src="../branco info/WhatsApp Image 2026-11-01 at 11.05.29 PM (4).jpeg" alt="Selfie dei Lupetti e Vecchi Lupi nella Tana Un Popolo Libero" width="1600" height="1200" loading="lazy" decoding="async" />
+              <span class="gallery-item__overlay"><strong>La Nostra Tana · Un Popolo Libero</strong><small>Ingrandisci 🔍</small></span>
+            </button>
+          </figure>
+
+          <figure class="gallery-item reveal" data-category="ucraina">
+            <button
+              type="button"
+              class="gallery-item__btn"
+              data-title="In Chiesa con gli Scout Ucraini e il Totem del Branco"
+              data-desc="Estate 2025: i Lupetti di Brancaleone 1 e gli scout ucraini nelle rispettive uniformi riuniti in preghiera per la pace."
+            >
+              <span class="gallery-item__tag">🇺🇦 Estate 2025</span>
+              <img src="../branco info/WhatsApp Image 2026-11-01 at 11.05.29 PM (1).jpeg" alt="Lupetti Brancaleone 1 e scout ucraini in uniforme davanti all'altare" width="1600" height="1200" loading="lazy" decoding="async" />
+              <span class="gallery-item__overlay"><strong>Uniformi Unite per la Pace</strong><small>Ingrandisci 🔍</small></span>
+            </button>
+          </figure>
+
+          <figure class="gallery-item reveal" data-category="ucraina">
+            <button
+              type="button"
+              class="gallery-item__btn"
+              data-title="Il Fiore Rosso Serale con gli Amici Ucraini"
+              data-desc="Attorno al fuoco serale delimitato dalle pietre: fazzolettoni italiani e ucraini e la tradizionale camicia ricamata vyshyvanka."
+            >
+              <span class="gallery-item__tag">🇺🇦 Fiore Rosso</span>
+              <img src="../branco info/WhatsApp Image 2026-11-01 at 11.05.28 PM.jpeg" alt="Fuoco serale nel cerchio di pietre con lupetti e ragazzi ucraini" width="1600" height="1200" loading="lazy" decoding="async" />
+              <span class="gallery-item__overlay"><strong>Attorno al Fuoco senza Confini</strong><small>Ingrandisci 🔍</small></span>
+            </button>
+          </figure>
+
+          <figure class="gallery-item reveal" data-category="ucraina">
+            <button
+              type="button"
+              class="gallery-item__btn"
+              data-title="Mani Unite per la Pace sul Prato"
+              data-desc="Sdraiati sull’erba tenendosi per mano al centro: fazzolettoni di colori e città diverse diventano una sola grande famiglia."
+            >
+              <span class="gallery-item__tag">🇺🇦 Fratellanza</span>
+              <img src="../branco info/WhatsApp Image 2026-11-01 at 11.05.28 PM (1).jpeg" alt="Lupetti e scout ucraini sdraiati sul prato che si tengono per mano" width="1200" height="1600" loading="lazy" decoding="async" />
+              <span class="gallery-item__overlay"><strong>Mani Unite sul Prato</strong><small>Ingrandisci 🔍</small></span>
+            </button>
+          </figure>
+
+          <figure class="gallery-item reveal" data-category="ucraina">
+            <button
+              type="button"
+              class="gallery-item__btn"
+              data-title="Summer Camp 2025 nei Boschi"
+              data-desc="Tutti insieme sulla scalinata immersa nel verde con le magliette commemorative del campo estivo condiviso."
+            >
+              <span class="gallery-item__tag">🇺🇦 Summer Camp 2025</span>
+              <img src="../branco info/WhatsApp Image 2026-11-01 at 11.05.28 PM (2).jpeg" alt="Grande foto di gruppo Summer Camp 2025 sulla scalinata nel bosco" width="1600" height="1200" loading="lazy" decoding="async" />
+              <span class="gallery-item__overlay"><strong>Summer Camp 2025 nel Bosco</strong><small>Ingrandisci 🔍</small></span>
+            </button>
+          </figure>
+
+          <figure class="gallery-item reveal" data-category="ucraina">
+            <button
+              type="button"
+              class="gallery-item__btn"
+              data-title="Mani in Pasta e Scambio del Fazzolettone"
+              data-desc="Un giovane amico ucraino indossa con gioia il fazzolettone blu e rosso di Brancaleone 1 durante il laboratorio di cucina al campo."
+            >
+              <span class="gallery-item__tag">🇺🇦 Gioia Condivisa</span>
+              <img src="../branco info/WhatsApp Image 2026-11-01 at 11.05.29 PM (2).jpeg" alt="Ragazzo ucraino sorridente col fazzolettone blu e rosso di Brancaleone 1 e le mani infarinate" width="1200" height="1600" loading="lazy" decoding="async" />
+              <span class="gallery-item__overlay"><strong>Mani Abili &amp; Fazzolettone Br1</strong><small>Ingrandisci 🔍</small></span>
+            </button>
+          </figure>
+
+          <figure class="gallery-item reveal" data-category="ucraina">
+            <button
+              type="button"
+              class="gallery-item__btn"
+              data-title="Avventura tra gli Alberi col Caschetto"
+              data-desc="Pronti con imbraghi e caschetti per affrontare i percorsi sospesi nel parco avventura insieme ai compagni ucraini."
+            >
+              <span class="gallery-item__tag">🇺🇦 Avventura</span>
+              <img src="../branco info/WhatsApp Image 2026-11-01 at 11.05.29 PM.jpeg" alt="Lupetti e amici ucraini con caschetti e imbraghi al parco avventura nel bosco" width="1200" height="1600" loading="lazy" decoding="async" />
+              <span class="gallery-item__overlay"><strong>Parco Avventura nel Bosco</strong><small>Ingrandisci 🔍</small></span>
+            </button>
+          </figure>
+
+          <figure class="gallery-item reveal" data-category="ucraina">
+            <button
+              type="button"
+              class="gallery-item__btn"
+              data-title="Uniti attorno alla Bandiera dell’Ucraina"
+              data-desc="L’abbraccio di tutto il campo estivo 2025 a Brancaleone: amicizia vera che supera ogni confine."
+            >
+              <span class="gallery-item__tag">🇺🇦 Accoglienza</span>
+              <img src="../branco info/WhatsApp Image 2026-11-01 at 11.05.29 PM (3).jpeg" alt="Gruppo riunito con la bandiera blu e gialla dell'Ucraina al campo estivo" width="1600" height="1200" loading="lazy" decoding="async" />
+              <span class="gallery-item__overlay"><strong>Accoglienza e Fratellanza 2025</strong><small>Ingrandisci 🔍</small></span>
+            </button>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. COME PARTECIPARE & TRASPARENZA COSTI -->
+    <section class="section">
+      <div class="container" style="max-width: 820px; text-align: center">
+        <div class="reveal">
+          <span class="section-kicker">Unisciti alla nostra Famiglia Felice</span>
+          <h2 class="section-title">Vieni a conoscere il nostro Branco!</h2>
+          <p class="section-subtitle" style="margin-inline: auto">
+            Se tuo figlio o tua figlia ha tra gli <strong>8 e gli 11 anni</strong>, passa a trovarci nella
+            nostra sede a Brancaleone. I Vecchi Lupi (i Capi del Branco) saranno felicissimi di accogliervi e
+            rispondere a ogni vostra domanda.
+          </p>
+
+          <p class="cost-note" style="max-width: 680px; margin: 1.5rem auto">
+            <span aria-hidden="true">ℹ️</span>
+            <span>
+              <strong>Crescere insieme non dovrebbe essere un privilegio:</strong> è previsto il censimento annuale
+              (quota associativa AGESCI + copertura assicurativa); non sono previste quote mensili fisse. Ci impegniamo
+              inoltre a sostenere le famiglie attraverso <strong>iniziative di autofinanziamento</strong> affinché il valore
+              dello scoutismo non dipenda mai dalle possibilità economiche. La cosa più importante non è ciò che si possiede,
+              ma la voglia di mettersi in gioco!
+            </span>
+          </p>
+
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.8rem">
+            <a
+              href="https://wa.me/393486533309?text=Ciao%20Capi%20del%20Branco%20Waingunga%20(AGESCI%20Brancaleone%201)!%20Vorrei%20avere%20informazioni%20per%20il%20Branco."
+              class="btn btn--whatsapp btn--lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >💬 WhatsApp Branco (+39 348 653 3309)</a>
+            <a href="index.html#contatti" class="btn btn--red btn--lg">Vieni a conoscere il nostro gruppo</a>
+            <a href="index.html" class="btn btn--outline btn--lg">Torna alla Homepage</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. STRISCIA DI NAVIGAZIONE INCROCIATA TRA BRANCHE -->
+    <section class="branch-nav-strip">
+      <div class="container">
+        <div class="branch-nav-strip__header reveal">
+          <span class="section-kicker">Il cammino continua</span>
+          <h3>Scopri le altre branche del Gruppo Brancaleone 1</h3>
+          <p>Dall'infanzia alla giovinezza, ogni età ha la sua avventura dedicata:</p>
+        </div>
+
+        <div class="branch-nav-strip__grid reveal">
+          <a href="reparto.html" class="branch-nav-strip__card branch-nav-strip__card--eg">
+            <span class="branch-nav-strip__icon" aria-hidden="true">🟢</span>
+            <div class="branch-nav-strip__body">
+              <strong>Branca E/G · Reparto (11–16 anni)</strong>
+              <span>Esploratori e Guide: costruzioni, tenda, nodi, fuochi e grandi imprese di squadriglia.</span>
+            </div>
+            <span class="branch-nav-strip__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="clan.html" class="branch-nav-strip__card branch-nav-strip__card--rs">
+            <span class="branch-nav-strip__icon" aria-hidden="true">🔴</span>
+            <div class="branch-nav-strip__body">
+              <strong>Branca R/S · Clan/Fuoco (16–21 anni)</strong>
+              <span>Rover e Scolte: strada zaino in spalla, comunità fraterna e servizio gratuito.</span>
+            </div>
+            <span class="branch-nav-strip__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Istituzionale -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <strong>Dove Siamo</strong>
+          <p>Gruppo Scout AGESCI Brancaleone 1<br />Brancaleone (RC) · Calabria</p>
+        </div>
+
+        <div class="footer-logo-center">
+          <span class="footer-emblem-wrap">
+            <img src="AGESCI.svg" alt="Emblema ufficiale AGESCI" width="52" height="60" loading="lazy" />
+          </span>
+          <strong>AGESCI Brancaleone 1</strong>
+          <span>“Lasciare il mondo un po’ migliore di quanto l’abbiamo trovato.”</span>
+        </div>
+
+        <div class="footer-col footer-col--right">
+          <strong>Contatti &amp; Social</strong>
+          <p>
+            WhatsApp Branco: <a href="https://wa.me/393486533309" target="_blank" rel="noopener noreferrer">+39 348 653 3309</a><br />
+            WhatsApp Reparto: <a href="https://wa.me/393332547995" target="_blank" rel="noopener noreferrer">+39 333 254 7995</a><br />
+            <a href="https://www.instagram.com/agescibrancaleone1?utm_source=ig_web_button_share_sheet&amp;vrfl=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram</a>
+            ·
+            <a href="https://www.facebook.com/p/Agesci-Brancaleone-1-100078887537538/" target="_blank" rel="noopener noreferrer">Facebook</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© Gruppo Scout AGESCI Brancaleone 1 · Associazione Guide e Scouts Cattolici Italiani</span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#chi-siamo">Il nostro gruppo</a>
+          <a href="branco.html">Branca L/C</a>
+          <a href="reparto.html">Branca E/G</a>
+          <a href="clan.html">Branca R/S</a>
+          <a href="index.html#contatti">Contatti</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Nativo <dialog> per le 9 foto del Branco -->
+  <dialog class="lightbox" id="photoLightbox" aria-label="Visualizzazione foto ingrandita">
+    <div class="lightbox__content">
+      <button type="button" class="lightbox__close" id="lightboxClose" aria-label="Chiudi foto">✕</button>
+      <div class="lightbox__stage">
+        <button type="button" class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Foto precedente">‹</button>
+        <img id="lightboxImg" src="" alt="" />
+        <button type="button" class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Foto successiva">›</button>
+      </div>
+      <div class="lightbox__caption-bar">
+        <span class="lightbox__counter" id="lightboxCounter">Foto 1 di 9</span>
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxDesc"></p>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>

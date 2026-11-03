@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="day">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Branca E/G — Reparto Esploratori e Guide (11–16 anni) · AGESCI Brancaleone 1</title>
+  <meta
+    name="description"
+    content="Entra nel Reparto del Gruppo Scout AGESCI Brancaleone 1: vita di squadriglia, laboratorio nodi, pionieristica, fuochi in sicurezza, campi in tenda e il video ideato dai ragazzi."
+  />
+  <link rel="icon" type="image/svg+xml" href="AGESCI.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <!-- Barra di avanzamento corda -->
+  <div class="scroll-rope" aria-hidden="true">
+    <div class="scroll-rope__fill" id="scrollRopeFill"></div>
+  </div>
+
+  <a href="#contenuto-principale" class="skip-link">Salta al contenuto principale</a>
+
+  <!-- Header Istituzionale -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Gruppo Scout AGESCI Brancaleone 1 - Torna alla Home">
+        <span class="brand__emblem" aria-hidden="true">
+          <img src="AGESCI.svg" alt="" width="38" height="43" />
+        </span>
+        <span class="brand__scarf" aria-hidden="true" title="Il fazzolettone blu e rosso di Brancaleone 1">
+          <svg viewBox="0 0 44 44" width="34" height="34" fill="none">
+            <path d="M5 9C16 12.8 28 12.8 39 9L25.2 34.5C23.8 37 20.2 37 18.8 34.5L5 9Z" fill="#1E3F73" stroke="#FFFFFF" stroke-width="1.4" />
+            <path d="M9.5 11.5L25.5 31.5" stroke="#D92B3A" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M34.5 11.5L18.5 31.5" stroke="#D92B3A" stroke-width="2.5" stroke-linecap="round" />
+            <rect x="18.5" y="32" width="7" height="4.2" rx="1.6" fill="#F5C114" />
+            <path d="M19.5 36.2L17 42L21.5 39.8L22 36.2Z" fill="#1E3F73" />
+            <path d="M24.5 36.2L27 42L22.5 39.8L22 36.2Z" fill="#D92B3A" />
+          </svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__eyebrow">Gruppo Scout AGESCI</span>
+          <strong class="brand__name">Brancaleone 1</strong>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navigazione principale">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#chi-siamo" class="nav-link">Lo scoutismo e il gruppo</a>
+        <a href="branco.html" class="nav-link nav-link--lc">Branca L/C</a>
+        <a href="reparto.html" class="nav-link nav-link--eg is-current" aria-current="page">Branca E/G</a>
+        <a href="clan.html" class="nav-link nav-link--rs">Branca R/S</a>
+        <a href="index.html#contatti" class="nav-link">Contatti</a>
+        <a href="index.html#contatti" class="btn btn--red btn--sm nav-cta-mobile">Vieni a conoscerci</a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          type="button"
+          class="theme-toggle"
+          id="themeToggle"
+          aria-pressed="false"
+          title="Cambia atmosfera tra Giorno al Campo e Sera al Bivacco"
+        >
+          <span class="theme-toggle__icon" id="themeIcon" aria-hidden="true">🔥</span>
+          <span class="theme-toggle__label" id="themeLabel">Bivacco</span>
+        </button>
+
+        <a href="index.html#contatti" class="btn btn--red btn--sm hide-tablet">Vieni a conoscerci</a>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="mainNav"
+          aria-label="Apri menu di navigazione"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenuto-principale">
+    <!-- HERO DEDICATA BRANCA E/G (VERDE) -->
+    <section class="branch-hero branch-hero--eg">
+      <div class="branch-hero__ambient" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="branch-breadcrumb" aria-label="Percorso di navigazione">
+          <a href="index.html">Home</a>
+          <span class="branch-breadcrumb__sep">/</span>
+          <a href="index.html#branche">Branche AGESCI</a>
+          <span class="branch-breadcrumb__sep">/</span>
+          <span aria-current="page">Branca E/G (11–16 anni)</span>
+        </nav>
+
+        <span class="branch-hero__badge">🟢 Branca E/G · 11–16 anni · Il Verde Bosco</span>
+        <h1 class="branch-hero__title">Reparto: Esploratori e Guide<br />L’Età della Grande Avventura</h1>
+        <div class="branch-hero__motto">“Estote Parati” (Siate Pronti)</div>
+
+        <p class="branch-hero__lead">
+          Dagli 11 ai 16 anni ragazze e ragazzi vivono la dimensione autentica dello scautismo:
+          la <strong>Squadriglia</strong>, la tenda montata con le proprie mani, i tavoli da campo in legno
+          e corda, il fuoco acceso in sicurezza e la conquista di competenze pratiche che trasformano
+          l'autonomia in stile di vita.
+        </p>
+
+        <div class="branch-hero__meta-strip">
+          <div class="branch-hero__meta-item">
+            <span>⛺</span>
+            <span>Unità: <strong>Il Reparto di Guide ed Esploratori</strong></span>
+          </div>
+          <div class="branch-hero__meta-item">
+            <span>🧭</span>
+            <span>Pattuglia autonoma: <strong>La Squadriglia</strong></span>
+          </div>
+          <div class="branch-hero__meta-item">
+            <span>🌲</span>
+            <span>Metodo: <strong>Imparare Facendo (Learning by Doing)</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. VITA DI REPARTO & SQUADRIGLIE -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Autonomia e corresponsabilità</span>
+          <h2 class="section-title">La Squadriglia: Una piccola democrazia sul campo</h2>
+          <p class="section-subtitle">
+            Nel Reparto i ragazzi non ricevono ordini: sono organizzati in <strong>Squadriglie</strong> di 6–8
+            compagni (guidati da un Capo Squadriglia eletto tra i più esperti) con un nome di animale
+            (es. <em>Panda</em>), un guidone e un grido di pattuglia.
+          </p>
+        </div>
+
+        <div class="branch-grid-3 reveal">
+          <article class="branch-card branch-card--eg">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🚩</div>
+            <h3>I Ruoli di Squadriglia</h3>
+            <p>
+              In Squadriglia ognuno ha un compito vitale e nessuno è inutile:
+            </p>
+            <ul>
+              <li><strong>Capo &amp; Vice:</strong> guidano e coordinano le attività</li>
+              <li><strong>Cuciniere:</strong> prepara i pasti per tutta la pattuglia</li>
+              <li><strong>Pioniere &amp; Guardiano dell'Ascia:</strong> cura legna, nodi e attrezzi</li>
+              <li><strong>Topografo &amp; Soccorritore:</strong> mappa, bussola e cassetta medica</li>
+            </ul>
+          </article>
+
+          <article class="branch-card branch-card--eg">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">💡</div>
+            <h3>L’Impresa di Squadriglia</h3>
+            <p>
+              È il grande sogno progettato e realizzato direttamente dai ragazzi: ideare un'uscita speciale,
+              costruire una zattera, realizzare una sopraelevata nel bosco o girare un video (proprio come
+              quello presente su questa pagina!).
+            </p>
+            <ul>
+              <li>Ideazione autonoma dei ragazzi</li>
+              <li>Pianificazione e divisione dei compiti</li>
+              <li>Realizzazione pratica sul campo</li>
+              <li>Verifica finale col Consiglio di Reparto</li>
+            </ul>
+          </article>
+
+          <article class="branch-card branch-card--eg">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🏕️</div>
+            <h3>Il Campo Estivo in Tenda</h3>
+            <p>
+              Il momento culminante dell’anno scout: 10–12 giorni immersi nella natura selvaggia dei boschi
+              calabresi. La Squadriglia vive nella propria tenda di reparto (tende di tipo canadese o di pattuglia),
+              costruisce il proprio angolo di campo e cucina sui propri fuochi.
+            </p>
+          </article>
+        </div>
+
+        <!-- Foto Reparto nel bosco (WA0038) -->
+        <div style="margin-top: 2.4rem;" class="reveal">
+          <figure class="stereotipi-banner-photo">
+            <img
+              src="../Reparto info/IMG-20261018-WA0038.jpg"
+              alt="Il Reparto del Gruppo AGESCI Brancaleone 1 sorridente nel bosco"
+              width="1600"
+              height="900"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Il nostro Reparto immerso nei boschi: sorrisi, fraternità e avventura all’aria aperta!</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PIONIERISTICA & COSTRUZIONI CON HOTSPOT (WA0000) -->
+    <section class="section section--tinted" id="pionieristica">
+      <div class="container">
+        <div class="craft-odoo-grid reveal">
+          <div class="craft-media-col">
+            <div class="hotspot-frame" id="craftHotspotFrame">
+              <img
+                src="../Reparto info/IMG-20261018-WA0000.jpg"
+                alt="Tavolo da campo con panche costruito con pali di legno e corde dal Gruppo Scout AGESCI Brancaleone 1"
+                width="1600"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+              <button
+                type="button"
+                class="hotspot-pin is-selected"
+                style="left: 23%; top: 48%"
+                data-spot-text="🪵 Piano del tavolo: assi e pali ben squadrati legati con legature parallele per creare una superficie comoda per mangiare e scrivere."
+                aria-label="Dettaglio piano tavolo"
+              >+</button>
+              <button
+                type="button"
+                class="hotspot-pin"
+                style="left: 49%; top: 68%"
+                data-spot-text="🪢 Legatura quadrata a incrocio: stringe due pali perpendicolari con precisione millimetrica. Più la corda è serrata coi giri di strozzatura, più la struttura regge pesi elevati."
+                aria-label="Dettaglio legatura portante"
+              >+</button>
+              <button
+                type="button"
+                class="hotspot-pin"
+                style="left: 77%; top: 62%"
+                data-spot-text="🪑 Panca sollevata dal terreno: i ragazzi mangiano seduti comodamente insieme all’aperto, senza toccare l’umidità del suolo."
+                aria-label="Dettaglio panca sospesa"
+              >+</button>
+            </div>
+            <div class="craft-readout-box" id="craftSpotReadout" aria-live="polite">
+              🪵 <strong>Piano del tavolo:</strong> assi e pali ben squadrati legati con legature parallele per creare una superficie comoda per mangiare e scrivere.
+            </div>
+          </div>
+
+          <div class="craft-content-col">
+            <span class="section-kicker">Abilità manuale · Zero chiodi</span>
+            <h2 class="section-title" style="text-align: left">Pionieristica: Costruire con pali e corde</h2>
+            <p>
+              Guarda la foto accanto: questo <strong>tavolo con panche</strong> è stato interamente
+              costruito dalle nostre Guide e dai nostri Esploratori nel bosco.
+            </p>
+            <p>
+              Nello scautismo non usiamo chiodi che rovinano gli alberi: usiamo <strong>pali di legno e
+              cordame vegetale</strong>. Conoscere le tecniche di pionieristica trasmette ai ragazzi la
+              consapevolezza che con le proprie mani e l’ingegno comune si può creare un campo comodo,
+              sicuro e ordinato in mezzo alla natura.
+            </p>
+            <div class="odoo-quote-callout">
+              “La pionieristica non è semplice bricolage: è scuola di geometria pratica, pazienza, sicurezza
+              e fiducia nel lavoro svolto insieme al compagno di squadra.”
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. IL LABORATORIO TECNICO DEL NODO PIANO (SVG INTERATTIVO TOPOLOGICAMENTE ESATTO A 6 INCROCI) -->
+    <section class="section" id="nodi">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">La tecnica per eccellenza</span>
+          <h2 class="section-title">Laboratorio Tecnico: Impara il Vero Nodo Piano</h2>
+          <p class="section-subtitle">
+            Il <strong>Nodo Piano</strong> è il simbolo stesso della fraternità scout (è il nodo che chiude
+            in basso il nostro Emblema AGESCI!). Scopri come eseguirlo passo dopo passo in modo simmetrico
+            ed evita l’errore del “Nodo dell’Asino”.
+          </p>
+        </div>
+
+        <div class="knot-lab reveal">
+          <div class="knot-lab__text">
+            <span class="badge badge--green">Tecnica Scout Ufficiale</span>
+            <h3>Topologia Esatta: I 4 Passi del Nodo Piano</h3>
+            <p>
+              Usa i pulsanti numerati qui sotto per visualizzare l’intreccio vettoriale in tempo reale:
+            </p>
+
+            <div class="knot-steps" role="group" aria-label="Passi di esecuzione del nodo">
+              <button type="button" class="knot-step-btn" data-knot-step="1">
+                <span class="knot-step-btn__num">1</span> Capi di fronte
+              </button>
+              <button type="button" class="knot-step-btn" data-knot-step="2">
+                <span class="knot-step-btn__num">2</span> 1° Mezzo nodo
+              </button>
+              <button type="button" class="knot-step-btn is-active" data-knot-step="3">
+                <span class="knot-step-btn__num">3</span> Nodo Piano Simmetrico
+              </button>
+              <button type="button" class="knot-step-btn knot-step-btn--warn" data-knot-step="4">
+                <span class="knot-step-btn__num">4</span> ⚠️ Nodo dell’Asino (Errore)
+              </button>
+            </div>
+
+            <div class="knot-explanation-box" id="knotCaption" aria-live="polite">
+              <strong>3. Secondo mezzo nodo opposto («Sinistra sopra Destra») — NODO PIANO PERFETTO!</strong>
+              Guarda le due asole: a sinistra <strong>entrambi i rami blu escono SOPRA</strong> l’archetto rosso
+              dallo stesso lato; a destra <strong>entrambi i rami rossi escono SOTTO</strong> l’archetto blu.
+              Più tiri, più tiene senza scorrere!
+            </div>
+          </div>
+
+          <div class="knot-svg-card">
+            <div class="knot-svg-card__header">
+              <span>Schema Interattivo AGESCI</span>
+              <span class="knot-status-pill" id="knotStatusPill">✓ Vero Nodo Piano (Simmetrico)</span>
+            </div>
+            <svg id="knotSvg" class="knot-svg" viewBox="0 0 500 240" role="img" aria-label="Diagramma vettoriale del nodo"></svg>
+          </div>
+        </div>
+
+        <div class="branch-grid-3 reveal" style="margin-top: 2rem;">
+          <article class="branch-card branch-card--eg">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🪢</div>
+            <h3>Nodi di Giunzione</h3>
+            <p><strong>Nodo Piano:</strong> unisce due corde dello stesso spessore.<br /><strong>Nodo Bandiera (o di Rete):</strong> unisce due corde di spessore differente senza slittare.</p>
+          </article>
+          <article class="branch-card branch-card--eg">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">⚓</div>
+            <h3>Nodi di Ancoraggio</h3>
+            <p><strong>Nodo Parlato:</strong> blocca saldamente una corda attorno a un palo.<br /><strong>Gassa d’Amante:</strong> crea un’asola fissa infallibile che non scorre mai.</p>
+          </article>
+          <article class="branch-card branch-card--eg">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🪵</div>
+            <h3>Legature per Costruzioni</h3>
+            <p><strong>Legatura Quadrata:</strong> per pali a 90°.<br /><strong>Legatura Diagonale:</strong> per pali a croce ad X.<br /><strong>Legatura a Tripode:</strong> per creare treppiedi stabili per tende e cambusa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FUOCO E SICUREZZA (FOTO WA0020) -->
+    <section class="section section--tinted" id="fuoco">
+      <div class="container">
+        <div class="stereotipi-intro-grid reveal">
+          <figure class="stereotipi-banner-photo">
+            <img
+              src="../Reparto info/IMG-20261018-WA0020.jpg"
+              alt="Il fuoco di bivacco serale in sicurezza con cerchio di pietre del Gruppo Brancaleone 1"
+              width="1600"
+              height="900"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Il cerchio attorno al fuoco di bivacco in totale sicurezza con le chitarre e i Capi.</figcaption>
+          </figure>
+
+          <div>
+            <span class="section-kicker">Prudenza e competenza</span>
+            <h2 class="section-title" style="text-align: left">Accendere il fuoco in totale sicurezza</h2>
+            <p class="section-subtitle" style="text-align: left">
+              Ai ragazzi non vietiamo il fuoco: insegniamo loro a <strong>conoscerlo, rispettarlo e domarlo
+              con regole ferree</strong>, trasformando un elemento affascinante in una prova di responsabilità.
+            </p>
+            <div class="odoo-myth-box">
+              <strong class="odoo-myth-box__myth">🔥 Le nostre 5 Regole d’Oro del Fuoco:</strong>
+              <p>
+                <strong>1. Terreno pulito:</strong> via foglie secche ed aghi di pino per un raggio di 3 metri.<br />
+                <strong>2. Cerchio di pietre:</strong> il focolare è sempre circoscritto da massi ben posizionati.<br />
+                <strong>3. Acqua e sabbia pronte:</strong> mai accendere un fiammifero senza un secchio d’acqua accanto.<br />
+                <strong>4. Zero liquidi infiammabili:</strong> si accende solo con legnetti fini, corteccia ed esca naturale.<br />
+                <strong>5. Spegnimento totale:</strong> cenere fredda al tatto prima di lasciare il cerchio!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ORIENTAMENTO, BUSSOLA E CUCINA TRAPPEUR -->
+    <section class="section" id="competenze">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Abilità nella natura selvaggia</span>
+          <h2 class="section-title">Orientamento, Cartografia e Cucina Trappeur</h2>
+          <p class="section-subtitle">
+            Saper leggere una carta topografica IGM, calcolare l’azimut con la bussola Silva o cucinare
+            sulla brace: abilità che sviluppano prontezza mentale e autosufficienza.
+          </p>
+        </div>
+
+        <div class="branch-grid-3 reveal">
+          <article class="branch-card branch-card--eg">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🧭</div>
+            <h3>Bussola e Carte IGM</h3>
+            <p>
+              Imparare a leggere le curve di livello, calcolare i dislivelli, orientare la cartina col Nord
+              magnetico e camminare di notte seguendo la Stella Polare e la costellazione di Cassiopea.
+            </p>
+          </article>
+
+          <article class="branch-card branch-card--eg">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🍳</div>
+            <h3>Cucina Trappeur e Cambusa</h3>
+            <p>
+              Cucinare senza pentole direttamente sul fuoco: pane trappeur arrotolato sui rami di nocciolo,
+              patate cotte sotto la cenere, gestione della cambusa di squadriglia e igiene accurata delle vivande.
+            </p>
+          </article>
+
+          <article class="branch-card branch-card--eg">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">📡</div>
+            <h3>Segnalazione e Tracce</h3>
+            <p>
+              Il codice Morse con fischietto e torcia, la segnalazione semaforica con le bandierine bicolori
+              e i segni di pista scout per ritrovare la strada nei sentieri senza lasciare tracce inquinanti.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PROGRESSIONE: TAPPE E SPECIALITÀ DI REPARTO -->
+    <section class="section section--tinted">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Il sentiero di crescita del ragazzo</span>
+          <h2 class="section-title">Le Tre Tappe e i Brevetti di Competenza</h2>
+          <p class="section-subtitle">
+            Dagli 11 ai 16 anni il ragazzo compie un viaggio che lo porta da principiante a punto di riferimento
+            per i più piccoli, attraverso tre tappe progressive:
+          </p>
+        </div>
+
+        <div class="branch-grid-3 reveal">
+          <article class="branch-card branch-card--eg">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🌱</div>
+            <h3>1ª Tappa: La Scoperta</h3>
+            <p><strong>1° Anno di Reparto:</strong> il novizio scopre la Squadriglia, impara le prime tecniche di base (nodi elementari, montaggio tenda, cucina) e pronuncia la <em>Promessa Scout</em>.</p>
+          </article>
+
+          <article class="branch-card branch-card--eg">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🌿</div>
+            <h3>2ª Tappa: La Competenza</h3>
+            <p><strong>2° e 3° Anno:</strong> il ragazzo conquista le <strong>Specialità</strong> (Pioniere, Topografo, Naturalista, Falegname, Cuoco) e partecipa ai Campi di Competenza regionali e nazionali.</p>
+          </article>
+
+          <article class="branch-card branch-card--eg">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🌳</div>
+            <h3>3ª Tappa: La Responsabilità</h3>
+            <p><strong>4° e 5° Anno:</strong> il ragazzo diventa Capo Squadriglia o Vice, assume la responsabilità di guidare i compagni e si prepara al passaggio in Branca R/S (Noviziato).</p>
+          </article>
+        </div>
+
+        <div class="branch-grid-2 reveal" style="margin-top: 2.4rem;">
+          <article class="branch-card branch-card--eg">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">🛡️</div>
+            <h3>Protezione Civile &amp; Primo Soccorso</h3>
+            <p>
+              Essere pronti significa anche saper aiutare: educazione alla prevenzione, tecniche di primo soccorso
+              e preparazione costante per essere utili al prossimo prima che arrivi un’emergenza.
+            </p>
+          </article>
+          <article class="branch-card branch-card--eg">
+            <div class="branch-card__bar"></div>
+            <div class="branch-card__icon" aria-hidden="true">⚖️</div>
+            <h3>Democrazia &amp; Consiglio Capi</h3>
+            <p>
+              Pedagogia istituzionale: assemblee, consigli e squadriglie. Si impara a discutere senza distruggere,
+              ascoltare tutti e prendere decisioni condivise con responsabilità reale.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. VIAGGIO IN TRENO VERSO ROMA CON HOTSPOT (WA0039) -->
+    <section class="section" id="roma">
+      <div class="container">
+        <div class="rome-grid reveal">
+          <div class="rome-grid__content">
+            <span class="section-kicker">Orizzonti aperti</span>
+            <h2 class="section-title" style="text-align: left">
+              Zaino in spalla: In treno da Brancaleone fino a Roma!
+            </h2>
+            <p>
+              Fare gli scout nel nostro Reparto significa viaggiare davvero. Oltre ai campi nei boschi,
+              <strong>appena si presenta l’occasione saliamo sul treno con gli zaini e i guidoni per vivere
+              grandi raduni ed eventi meravigliosi, come andare a Roma!</strong>
+            </p>
+            <p>
+              Partire dalla nostra stazione ferroviaria insegna a muoversi con ordine in gruppo, viaggiare
+              leggeri con l’essenziale e sentirsi fratelli di decine di migliaia di scout provenienti da tutta Italia.
+            </p>
+            <div class="rome-Readout-box" id="romeSpotReadout" aria-live="polite">
+              👆 <strong>Tocca i punti + sulla foto della stazione</strong> per scoprire i dettagli della partenza!
+            </div>
+          </div>
+
+          <div class="rome-grid__media">
+            <div class="hotspot-frame hotspot-frame--4x3" id="romeHotspotFrame">
+              <img
+                src="../Reparto info/IMG-20261018-WA0039.jpg"
+                alt="Il Gruppo AGESCI Brancaleone 1 in stazione davanti al treno InterCity con zaini e guidoni verso Roma"
+                width="1600"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
+              <button
+                type="button"
+                class="hotspot-pin"
+                style="left: 12%; top: 30%"
+                data-spot-text="🚆 Il vero treno della partenza: davanti all’InterCity in stazione a Brancaleone pronti a partire insieme con entusiasmo!"
+                aria-label="Dettaglio treno InterCity"
+              >+</button>
+              <button
+                type="button"
+                class="hotspot-pin"
+                style="left: 34%; top: 73%"
+                data-spot-text="🎒 Zaini, stuoie e guidone della Squadriglia Panda: portare sulle spalle tutto ciò che serve insegna il valore dell’essenzialità."
+                aria-label="Dettaglio zaini e guidoni"
+              >+</button>
+              <button
+                type="button"
+                class="hotspot-pin"
+                style="left: 84%; top: 48%"
+                data-spot-text="🧭 I Capi sempre al fianco dei ragazzi: ogni viaggio è curato nei minimi dettagli per un’esperienza sicura e indimenticabile."
+                aria-label="Dettaglio Capi accompagnatori"
+              >+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. IL VIDEO GIRATO A BRANCALEONE (IDEATO DALLE GUIDE ED ESPLORATORI!) -->
+    <section class="section section--tinted" id="video">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Creatività dei ragazzi al 100%</span>
+          <h2 class="section-title">Guarda il video ideato dalle nostre Guide ed Esploratori!</h2>
+          <p class="section-subtitle">
+            Non un video promozionale imposto dagli adulti: <strong>le scene e le idee sono nate direttamente
+            dai ragazzi del Reparto</strong> per raccontare con autenticità cosa vivono ogni settimana a Brancaleone.
+          </p>
+        </div>
+
+        <div class="reel-showcase reveal">
+          <div class="reel-player-col">
+            <div class="reel-phone-frame" id="reelFrame">
+              <video
+                id="brancaVideo"
+                class="reel-video"
+                src="../Reparto%20info/WhatsApp%20Video%202026-10-26%20at%2011.26.04%20PM.mp4#t=0.1"
+                preload="metadata"
+                playsinline
+                aria-label="Video del Gruppo AGESCI Brancaleone 1 ideato dalle Guide e dagli Esploratori"
+              ></video>
+
+              <button
+                type="button"
+                class="reel-big-play"
+                id="reelBigPlayBtn"
+                aria-label="Riproduci il video del Reparto Brancaleone 1"
+              >
+                <span class="reel-big-play__circle" aria-hidden="true">▶</span>
+                <span class="reel-big-play__text">Avvia il video</span>
+              </button>
+
+              <div class="reel-controls">
+                <div class="reel-progress-wrap">
+                  <input
+                    type="range"
+                    id="reelScrubber"
+                    class="reel-scrubber"
+                    min="0"
+                    max="37.8"
+                    step="0.1"
+                    value="0"
+                    aria-label="Avanzamento del video"
+                  />
+                </div>
+                <div class="reel-controls__row">
+                  <button type="button" class="reel-ctrl-btn" id="reelPlayPauseBtn">▶ Riproduci</button>
+                  <button type="button" class="reel-ctrl-btn" id="reelMuteBtn">🔊 Audio attivo</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reel-story-col">
+            <div class="youth-credit-banner">
+              <span class="youth-credit-banner__icon" aria-hidden="true">💡</span>
+              <div>
+                <strong>Le idee per questo video vengono direttamente dal Reparto!</strong>
+                <p>
+                  Quando diamo fiducia ai ragazzi, loro ci sorprendono sempre: le Guide e gli Esploratori
+                  hanno scelto le inquadrature, il ritmo e il messaggio da trasmettere ai loro coetanei.
+                </p>
+              </div>
+            </div>
+
+            <div class="reel-highlights">
+              <div class="reel-highlight-card">
+                <span class="reel-highlight-card__icon" aria-hidden="true">🎬</span>
+                <div>
+                  <strong>Girato nei luoghi veri di Brancaleone</strong>
+                  <p>Dal lungomare alle colline dell'entroterra, con la nostra camicia azzurra e il fazzolettone blu e rosso.</p>
+                </div>
+              </div>
+
+              <div class="reel-highlight-card">
+                <span class="reel-highlight-card__icon" aria-hidden="true">🤝</span>
+                <div>
+                  <strong>Nessun copione recitato: vera amicizia</strong>
+                  <p>I volti sorridenti e le corse insieme rappresentano quello che facciamo ogni sabato e domenica.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="reel-cta-wrap">
+              <a href="index.html#contatti" class="btn btn--red">Vieni a conoscerci in sede →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. INVITO NATURALE & TRASPARENZA COSTI -->
+    <section class="section">
+      <div class="container" style="max-width: 820px; text-align: center">
+        <div class="reveal">
+          <span class="section-kicker">La tua avventura inizia qui</span>
+          <h2 class="section-title">Entra nel Reparto di Brancaleone 1!</h2>
+          <p class="section-subtitle" style="margin-inline: auto">
+            Se hai tra gli <strong>11 e i 16 anni</strong> (o se sei un genitore che desidera per suo figlio
+            un'esperienza formativa forte nella natura), passa a trovarci! I Capi Reparto ti accoglieranno
+            a braccia aperte.
+          </p>
+
+          <p class="cost-note" style="max-width: 680px; margin: 1.5rem auto">
+            <span aria-hidden="true">ℹ️</span>
+            <span>
+              <strong>Crescere insieme non dovrebbe essere un privilegio:</strong> è previsto il censimento annuale
+              (quota associativa AGESCI + copertura assicurativa ufficiale); non sono previste quote mensili. Sosteniamo le
+              famiglie con <strong>iniziative di autofinanziamento</strong> affinché la partecipazione sia aperta a tutti i ragazzi.
+              La cosa fondamentale è la voglia di mettersi in gioco!
+            </span>
+          </p>
+          <div class="schedule-callout" style="max-width: 680px; margin: 1rem auto; padding: 1rem; border-radius: 12px; background: rgba(45, 106, 79, 0.12); border: 1px solid rgba(45, 106, 79, 0.3); font-size: 0.9rem; text-align: left;">
+            <strong>🗓️ I nostri appuntamenti:</strong>
+            <ul style="margin: 0.4rem 0 0 1.2rem; line-height: 1.5;">
+              <li><strong>Sabato pomeriggio:</strong> dalle <strong>16:00 alle 18:00 circa</strong> in sede a Brancaleone.</li>
+              <li><strong>Domenica:</strong> Santa Messa alternandoci nelle <strong>due parrocchie del Comune di Brancaleone</strong>.</li>
+              <li><strong>Uscite sul territorio:</strong> indicativamente <strong>una ogni due mesi</strong>.</li>
+              <li><strong>Campo estivo in tenda:</strong> circa <strong>10–15 giorni</strong> nei boschi tra costruzioni, avventura e vita all’aria aperta.</li>
+            </ul>
+          </div>
+
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.8rem">
+            <a
+              href="https://wa.me/393332547995?text=Ciao%20Capi%20del%20Reparto%20(AGESCI%20Brancaleone%201)!%20Vorrei%20avere%20informazioni%20per%20il%20Reparto."
+              class="btn btn--whatsapp btn--lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >💬 WhatsApp Reparto (+39 333 254 7995)</a>
+            <a href="index.html#contatti" class="btn btn--red btn--lg">Vieni a conoscere il nostro gruppo</a>
+            <a href="index.html" class="btn btn--outline btn--lg">Torna alla Homepage</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. STRISCIA DI NAVIGAZIONE INCROCIATA TRA BRANCHE -->
+    <section class="branch-nav-strip">
+      <div class="container">
+        <div class="branch-nav-strip__header reveal">
+          <span class="section-kicker">Il cammino continua</span>
+          <h3>Scopri le altre branche del Gruppo Brancaleone 1</h3>
+          <p>Dall'infanzia alla giovinezza, ogni età ha la sua avventura dedicata:</p>
+        </div>
+
+        <div class="branch-nav-strip__grid reveal">
+          <a href="branco.html" class="branch-nav-strip__card branch-nav-strip__card--lc">
+            <span class="branch-nav-strip__icon" aria-hidden="true">🟡</span>
+            <div class="branch-nav-strip__body">
+              <strong>Branca L/C · Il Branco dei Lupetti (8–11 anni)</strong>
+              <span>Il nostro Branco Waingunga per bambini e bambine: gioco, fantasia e storie della Giungla per fare del proprio meglio.</span>
+            </div>
+            <span class="branch-nav-strip__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="clan.html" class="branch-nav-strip__card branch-nav-strip__card--rs">
+            <span class="branch-nav-strip__icon" aria-hidden="true">🔴</span>
+            <div class="branch-nav-strip__body">
+              <strong>Branca R/S · Clan/Fuoco (16–21 anni)</strong>
+              <span>Rover e Scolte: strada zaino in spalla, comunità fraterna e servizio gratuito verso il prossimo.</span>
+            </div>
+            <span class="branch-nav-strip__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Istituzionale -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <strong>Dove Siamo</strong>
+          <p>Gruppo Scout AGESCI Brancaleone 1<br />Brancaleone (RC) · Calabria</p>
+        </div>
+
+        <div class="footer-logo-center">
+          <span class="footer-emblem-wrap">
+            <img src="AGESCI.svg" alt="Emblema ufficiale AGESCI" width="52" height="60" loading="lazy" />
+          </span>
+          <strong>AGESCI Brancaleone 1</strong>
+          <span>“Lasciare il mondo un po’ migliore di quanto l’abbiamo trovato.”</span>
+        </div>
+
+        <div class="footer-col footer-col--right">
+          <strong>Contatti &amp; Social</strong>
+          <p>
+            WhatsApp Branco: <a href="https://wa.me/393486533309" target="_blank" rel="noopener noreferrer">+39 348 653 3309</a><br />
+            WhatsApp Reparto: <a href="https://wa.me/393332547995" target="_blank" rel="noopener noreferrer">+39 333 254 7995</a><br />
+            <a href="https://www.instagram.com/agescibrancaleone1?utm_source=ig_web_button_share_sheet&amp;vrfl=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram</a>
+            ·
+            <a href="https://www.facebook.com/p/Agesci-Brancaleone-1-100078887537538/" target="_blank" rel="noopener noreferrer">Facebook</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© Gruppo Scout AGESCI Brancaleone 1 · Associazione Guide e Scouts Cattolici Italiani</span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#chi-siamo">Il nostro gruppo</a>
+          <a href="branco.html">Branca L/C</a>
+          <a href="reparto.html">Branca E/G</a>
+          <a href="clan.html">Branca R/S</a>
+          <a href="index.html#contatti">Contatti</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
