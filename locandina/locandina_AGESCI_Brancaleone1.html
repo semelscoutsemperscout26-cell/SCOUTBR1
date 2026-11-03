@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <title>Locandina Ufficiale — Gruppo Scout AGESCI Brancaleone 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fraunces:opsz,wght@9..144,800;9..144,900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    @page {
+      size: 210mm 297mm;
+      margin: 0;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    html, body {
+      width: 210mm;
+      height: 297mm;
+      overflow: hidden;
+      background: #FAF6EE;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #10233F;
+    }
+
+    .poster {
+      position: relative;
+      width: 210mm;
+      height: 297mm;
+      padding: 8.5mm 9.5mm 8.5mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(245, 193, 20, 0.13), transparent 36%),
+        radial-gradient(circle at 88% 18%, rgba(200, 35, 51, 0.08), transparent 38%),
+        #FAF6EE;
+    }
+
+    /* Cornice editoriale esterna */
+    .poster::before {
+      content: "";
+      position: absolute;
+      inset: 4.2mm;
+      border: 1.6px solid rgba(16, 35, 63, 0.22);
+      border-radius: 3mm;
+      pointer-events: none;
+    }
+
+    /* Striscia superiore colori fazzolettone Brancaleone 1 (Blu + Rosso + Oro) */
+    .fazzolettone-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3.2mm;
+      background: linear-gradient(90deg, #132744 0%, #132744 68%, #C82333 68%, #C82333 85%, #F5C114 85%, #F5C114 100%);
+    }
+
+    /* 1. HEADER ISTITUZIONALE */
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4mm;
+      padding-bottom: 3mm;
+      border-bottom: 2px solid #132744;
+    }
+    .brand-left {
+      display: flex;
+      align-items: center;
+      gap: 3.2mm;
+    }
+    .logo-box {
+      width: 13.5mm;
+      height: 15mm;
+      background: #FFFFFF;
+      border: 1.5px solid #132744;
+      border-radius: 2.5mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.2mm;
+      box-shadow: 0 2px 6px rgba(16, 35, 63, 0.12);
+    }
+    .logo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .brand-titles {
+      display: flex;
+      flex-direction: column;
+    }
+    .brand-kicker {
+      font-size: 7.5pt;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: #C82333;
+    }
+    .brand-name {
+      font-family: 'Fraunces', serif;
+      font-size: 15.8pt;
+      font-weight: 900;
+      line-height: 1.05;
+      color: #10233F;
+      letter-spacing: -0.01em;
+    }
+    .location-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.4mm;
+      background: #132744;
+      color: #FFFFFF;
+      padding: 1.8mm 3.8mm;
+      border-radius: 999px;
+      font-size: 8.2pt;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-bottom: 2.5px solid #C82333;
+    }
+    .location-pill svg {
+      width: 3.6mm;
+      height: 3.6mm;
+      fill: #F5C114;
+      flex-shrink: 0;
+    }
+
+    /* 2. HEADLINE D'IMPATTO DA STRADA */
+    .hero-copy {
+      text-align: center;
+      margin-top: 1.5mm;
+    }
+    .attention-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.8mm;
+      background: #F5C114;
+      color: #10233F;
+      font-size: 8.5pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      padding: 1.3mm 4.5mm;
+      border-radius: 999px;
+      border: 1.6px solid #10233F;
+      margin-bottom: 2.2mm;
+      box-shadow: 2px 2px 0 #10233F;
+    }
+    .attention-tag svg {
+      width: 3.3mm;
+      height: 3.3mm;
+      fill: #C82333;
+    }
+    .main-headline {
+      font-family: 'Fraunces', serif;
+      font-weight: 900;
+      font-size: 32pt;
+      line-height: 0.98;
+      letter-spacing: -0.02em;
+      color: #10233F;
+      text-transform: uppercase;
+    }
+    .main-headline .accent-red {
+      display: block;
+      color: #C82333;
+      font-size: 34pt;
+      margin-top: 0.9mm;
+    }
+    .sub-headline {
+      margin: 2.3mm auto 0;
+      max-width: 170mm;
+      font-size: 10.3pt;
+      font-weight: 600;
+      line-height: 1.35;
+      color: #263850;
+    }
+    .sub-headline strong {
+      color: #10233F;
+      font-weight: 800;
+    }
+
+    /* 3. COLLAGE DI VERE FOTO POLAROID DEL GRUPPO BRANCALEONE 1 */
+    .photo-board {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      grid-template-rows: 57.5mm 46mm;
+      gap: 3.8mm;
+      margin-block: 2mm 1.5mm;
+    }
+    .polaroid {
+      position: relative;
+      background: #FFFFFF;
+      padding: 2.2mm 2.2mm 2.2mm;
+      border-radius: 2mm;
+      border: 1px solid rgba(16, 35, 63, 0.16);
+      box-shadow: 0 5px 15px rgba(16, 35, 63, 0.15);
+      display: flex;
+      flex-direction: column;
+      gap: 1.6mm;
+    }
+    .polaroid--hero {
+      grid-row: 1 / 3;
+      padding: 2.4mm 2.4mm 2.6mm;
+      transform: rotate(-1.1deg);
+    }
+    .polaroid--fire {
+      transform: rotate(1.2deg);
+    }
+    .polaroid--sea {
+      transform: rotate(0.85deg);
+    }
+    /* Nastro adesivo carta realistico sopra il bordo superiore */
+    .tape {
+      position: absolute;
+      top: -2.1mm;
+      left: 50%;
+      transform: translateX(-50%) rotate(-2deg);
+      width: 23mm;
+      height: 4.8mm;
+      background: rgba(245, 193, 20, 0.78);
+      border: 0.6px solid rgba(16, 35, 63, 0.16);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      z-index: 4;
+    }
+    .polaroid--fire .tape {
+      transform: translateX(-50%) rotate(2.5deg);
+    }
+    .polaroid__img-wrap {
+      width: 100%;
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+      border-radius: 1.2mm;
+      background: #10233F;
+    }
+    .polaroid__img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .polaroid--hero .polaroid__img-wrap img {
+      object-position: center 22%;
+    }
+    .polaroid--fire .polaroid__img-wrap img {
+      object-position: center 45%;
+    }
+    .polaroid--sea .polaroid__img-wrap img {
+      object-position: center 58%;
+    }
+    .polaroid__caption {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: 'Caveat', cursive;
+      font-size: 13.5pt;
+      font-weight: 700;
+      color: #10233F;
+      line-height: 1.05;
+      white-space: nowrap;
+    }
+    .polaroid--hero .polaroid__caption {
+      font-size: 15.5pt;
+    }
+
+    /* 4. LE TRE BRANCHE AGESCI (8-21 ANNI) */
+    .branches-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3mm;
+    }
+    .branch-pill {
+      background: #FFFFFF;
+      border-radius: 2.5mm;
+      padding: 2.5mm 3.2mm;
+      border: 1.5px solid rgba(16, 35, 63, 0.14);
+      border-top-width: 4.5px;
+      box-shadow: 0 2px 6px rgba(16, 35, 63, 0.06);
+    }
+    .branch-pill--lc { border-top-color: #F59E0B; }
+    .branch-pill--eg { border-top-color: #2D6A4F; }
+    .branch-pill--rs { border-top-color: #C82333; }
+
+    .branch-pill__age {
+      font-size: 7.4pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+      gap: 1.4mm;
+      margin-bottom: 0.5mm;
+    }
+    .dot {
+      width: 2.4mm;
+      height: 2.4mm;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+    .dot--lc { background: #F59E0B; }
+    .dot--eg { background: #2D6A4F; }
+    .dot--rs { background: #C82333; }
+
+    .branch-pill--lc .branch-pill__age { color: #B45309; }
+    .branch-pill--eg .branch-pill__age { color: #1E563B; }
+    .branch-pill--rs .branch-pill__age { color: #B91C1C; }
+
+    .branch-pill__title {
+      font-family: 'Fraunces', serif;
+      font-size: 11.4pt;
+      font-weight: 900;
+      color: #10233F;
+      line-height: 1.12;
+      margin-bottom: 0.6mm;
+    }
+    .branch-pill__desc {
+      font-size: 7.8pt;
+      font-weight: 600;
+      color: #475569;
+      line-height: 1.26;
+    }
+
+    /* 5. BLOCCO INFERIORE AD ALTO CONTRASTO CON CODICE QR GIGANTE E CONTATTI */
+    .cta-qr-panel {
+      background: #10233F;
+      color: #FFFFFF;
+      border-radius: 4mm;
+      padding: 4.8mm 5.5mm;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 5.5mm;
+      align-items: center;
+      border: 2px solid #10233F;
+      box-shadow: 0 8px 20px rgba(16, 35, 63, 0.22);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-qr-panel::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 2.6mm;
+      background: linear-gradient(180deg, #F5C114 0%, #F5C114 33.3%, #2ECC71 33.3%, #2ECC71 66.6%, #C82333 66.6%, #C82333 100%);
+    }
+
+    .cta-left {
+      padding-left: 2.2mm;
+      display: flex;
+      flex-direction: column;
+      gap: 2.1mm;
+    }
+    .scan-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.6mm;
+      align-self: flex-start;
+      background: #F5C114;
+      color: #10233F;
+      font-size: 8.2pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 1.1mm 3.4mm;
+      border-radius: 999px;
+    }
+    .scan-badge svg {
+      width: 3.4mm;
+      height: 3.4mm;
+      fill: #10233F;
+    }
+    .cta-title {
+      font-family: 'Fraunces', serif;
+      font-size: 18.8pt;
+      font-weight: 900;
+      line-height: 1.06;
+      color: #FFFFFF;
+    }
+    .cta-title span {
+      color: #FDE047;
+    }
+    .cta-sub {
+      font-size: 8.8pt;
+      font-weight: 500;
+      line-height: 1.35;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .contacts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.2mm;
+      margin-top: 0.8mm;
+      padding-top: 2.2mm;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .contact-box {
+      background: rgba(255, 255, 255, 0.09);
+      border-radius: 2mm;
+      padding: 1.6mm 2.6mm;
+      border-left: 3.2px solid #F5C114;
+    }
+    .contact-box--eg {
+      border-left-color: #2ECC71;
+    }
+    .contact-box__lbl {
+      display: block;
+      font-size: 6.9pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #CBD5E1;
+      margin-bottom: 0.2mm;
+    }
+    .contact-box__num {
+      font-size: 9.8pt;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: 0.01em;
+    }
+    .social-row {
+      display: flex;
+      align-items: center;
+      gap: 1.8mm;
+      font-size: 8.1pt;
+      font-weight: 700;
+      color: #FDE047;
+      margin-top: 0.3mm;
+    }
+    .social-row svg {
+      width: 3.4mm;
+      height: 3.4mm;
+      fill: #FDE047;
+      flex-shrink: 0;
+    }
+
+    /* Box Codice QR nitidissimo ad altissimo contrasto */
+    .qr-card {
+      background: #FFFFFF;
+      border-radius: 3.2mm;
+      padding: 2.6mm 2.6mm 2.1mm;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+      border: 3px solid #F5C114;
+    }
+    .qr-card img {
+      width: 44mm;
+      height: 44mm;
+      display: block;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+    .qr-card__caption {
+      margin-top: 1.2mm;
+      font-size: 7.4pt;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #10233F;
+    }
+  </style>
+</head>
+<body>
+  <main class="poster">
+    <div class="fazzolettone-bar"></div>
+
+    <!-- 1. INTESTAZIONE UFFICIALE AGESCI BRANCALEONE 1 -->
+    <header class="top-bar">
+      <div class="brand-left">
+        <div class="logo-box">
+          <img src="../codice/AGESCI.svg" alt="AGESCI" />
+        </div>
+        <div class="brand-titles">
+          <span class="brand-kicker">Associazione Guide e Scouts Cattolici Italiani</span>
+          <span class="brand-name">Gruppo Scout AGESCI Brancaleone 1</span>
+        </div>
+      </div>
+      <div class="location-pill">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        <span>Brancaleone (RC)</span>
+      </div>
+    </header>
+
+    <!-- 2. TITOLO D'IMPATTO PER ATTIRARE L'ATTENZIONE PER IL PAESE -->
+    <section class="hero-copy">
+      <div class="attention-tag">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        <span>Per bambini, ragazzi e giovani dagli 8 ai 21 anni</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+      </div>
+      <h1 class="main-headline">
+        Mettiti in gioco.
+        <span class="accent-red">Vivi l’avventura!</span>
+      </h1>
+      <p class="sub-headline">
+        Fuochi di bivacco con la chitarra, amicizie vere e cammini zaino in spalla.
+        <strong>Vieni a conoscere il gruppo scout di Brancaleone!</strong>
+      </p>
+    </section>
+
+    <!-- 3. VERE FOTO DEL GRUPPO BRANCALEONE 1 -->
+    <section class="photo-board">
+      <figure class="polaroid polaroid--hero">
+        <span class="tape"></span>
+        <div class="polaroid__img-wrap">
+          <img src="../Reparto info/IMG-20261018-WA0041.jpg" alt="Esploratori Brancaleone 1 con i guidoni" />
+        </div>
+        <figcaption class="polaroid__caption">
+          <span>La tua prossima avventura comincia qui!</span>
+        </figcaption>
+      </figure>
+
+      <figure class="polaroid polaroid--fire">
+        <span class="tape"></span>
+        <div class="polaroid__img-wrap">
+          <img src="../Reparto info/IMG-20261018-WA0020.jpg" alt="Fuoco di bivacco con chitarra" />
+        </div>
+        <figcaption class="polaroid__caption">
+          <span>Sere intorno al fuoco di campo</span>
+        </figcaption>
+      </figure>
+
+      <figure class="polaroid polaroid--sea">
+        <span class="tape"></span>
+        <div class="polaroid__img-wrap">
+          <img src="../branco info/WhatsApp Image 2026-11-01 at 11.05.29 PM (5).jpeg" alt="Lupetti Branco Waingunga sul mare Jonio" />
+        </div>
+        <figcaption class="polaroid__caption">
+          <span>Dal mare Jonio ai boschi d’Aspromonte</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- 4. LE TRE BRANCHE A COLPO D'OCCHIO -->
+    <section class="branches-strip">
+      <div class="branch-pill branch-pill--lc">
+        <span class="branch-pill__age"><span class="dot dot--lc"></span>8 – 11 Anni</span>
+        <div class="branch-pill__title">Branco · Lupetti</div>
+        <p class="branch-pill__desc">Gioco, fantasia, cacce nella natura e grandi amicizie nel Branco Waingunga.</p>
+      </div>
+      <div class="branch-pill branch-pill--eg">
+        <span class="branch-pill__age"><span class="dot dot--eg"></span>11 – 16 Anni</span>
+        <div class="branch-pill__title">Reparto · E/G</div>
+        <p class="branch-pill__desc">Tende, costruzioni in legno, cucina sul fuoco e imprese di squadriglia.</p>
+      </div>
+      <div class="branch-pill branch-pill--rs">
+        <span class="branch-pill__age"><span class="dot dot--rs"></span>16 – 21 Anni</span>
+        <div class="branch-pill__title">Clan/Fuoco · R/S</div>
+        <p class="branch-pill__desc">Strada zaino in spalla, comunità vera, scelte di vita e servizio.</p>
+      </div>
+    </section>
+
+    <!-- 5. PANNELLO CODICE QR + CONTATTI DIRETTI WHATSAPP & SOCIAL -->
+    <footer class="cta-qr-panel">
+      <div class="cta-left">
+        <span class="scan-badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+          <span>Inquadra il codice QR qui accanto →</span>
+        </span>
+        <h2 class="cta-title">Visita il nostro <span>sito ufficiale!</span></h2>
+        <p class="cta-sub">
+          Guarda le foto delle attività, scopri la branca giusta per la tua età e scrivici in un clic per venire a conoscerci in sede.
+        </p>
+        <div class="contacts-grid">
+          <div class="contact-box">
+            <span class="contact-box__lbl">WhatsApp Branco</span>
+            <span class="contact-box__num">+39 348 653 3309</span>
+          </div>
+          <div class="contact-box contact-box--eg">
+            <span class="contact-box__lbl">WhatsApp Reparto</span>
+            <span class="contact-box__num">+39 333 254 7995</span>
+          </div>
+        </div>
+        <div class="social-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+          <span>Instagram &amp; Facebook: Agesci Brancaleone 1 (@agescibrancaleone1)</span>
+        </div>
+      </div>
+
+      <div class="qr-card">
+        <img src="data:image/png;base64,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739pz3SvfvTzkHSebZ62/p7FT9fa/qPrk7Geydj+o33a/ssvrO2B1RMgQIAAAQIECKwlYGFda17bp9WRAAECBAgQIDC5gIV18gGJR4AAAQJrCEhJgMA4AQvrOFudCRAgQIAAAQIENhCwsG6AuE4LSQkQIECAAAEC6wlYWNebmcQECBAg8GkB9ydAYFcBC+uu3Geuqn8AABAASURBVG5GgAABAgQIECDQClhYW7F16iUlQIAAAQIECBxCwMJ6iDE6BAECBAiME9CZAIFPC1hYPz0B9ydAgAABAgQIELgrYGG9y7PORUkJECBAgAABAkcVON3C+tP3D997rx38vV4/XWv7J913Bydj69v8Pxnce6/tP1t9Mtb/nt1P11qfpMvf9v8p45bvtXmS7rzJ2Po2f1ufdPm3nM1PvZIuT3veJ+t/lf2U8d57vz745A/J2PMmY/s/ecxfZUmXJxlb/yuYH5YQON3CusRUhCRAgAABAgQIEPglYGH9RbHQD6ISIECAAAECBE4kYGE90bAdlQABAgT+LeA3AgTWELCwrjEnKQkQIECAAAECpxWwsE4/egEJECBAgAABAucWsLCee/5OT4AAgfMIOCkBAssKWFiXHZ3gBAgQIECAAIFzCFhY55qzNAQIECBAgAABAn8IWFj/APErAQIECBxBwBkIEDiSgIX1SNN0FgIECBAgQIDAAQUsrB8cqlsTIECAAAECBAg8Fjjdwpp03038mPDfFUnX/973Uv907d93e/zbTz3uvfe4478r7vX66VrS+fz7bn77UyDpPH+ayb33/rzfo9+TLk8ytv7e2X669uh8717/6Z733nv3fo8+f+/eP11Lxs7rUd4715+6lIzNn3T9nwr9W9FPM7n33m8fneLHe1l/utaG/qnHlu8l3Xzbeydj+7ees9WfbmGdbQDyECBAgAABAgQI3BewsN732e6qTgQIECBAgAABAi8JWFhfYvMhAgQIEPiUgPsSIHA+AQvr+WbuxAQIECBAgACBpQQsrEPGpSkBAgQIECBAgMBWAhbWrST1IUCAAIHtBXQkQIDAfwQsrP9B8F8CBAgQIECAAIF5BSys789GBwIECBAgQIAAgYECFtaBuFoTIECAQCOglgABAj8LWFh/dvEuAQIECBAgQIDAJAIW1nIQygkQIECAAAECBPYVON3C2n63bzuOtn8y9ruDk7n6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1tlA5SFAgAABAgQIrCGwTkoL6zqzkpQAAQIECBAgcEoBC+spx+7QBNYRkJQAAQIECFhYPQMECBAgQIAAgeMLLH1CC+vS4xOeAAECBAgQIHB8AQvr8WfshATWEZCUAAECBAj8IGBh/QHFWwQIECBAgACBlQWOlt3CerSJOg8BAgQIECBA4GACFtaDDdRxCKwjICkBAgQIEHhOwML6nJMqAgQIECBAgMCcAidIZWE9wZAdkQABAgQIECCwsoCF9cH0rtfrZabXg7jfLrfZk+67jNv+3wI+eCOZK8/o887Wv82T3JzXJfl+re3/4HF5+3LyPWNy+723b7hxg+R21uT7tY1v/61d8v2eye33vjV48Eb7/LT1D26/++U2f1vfHii5Pcvk+7XRedr8bX2bf7b69ryz1VtYZ5uIPAQIECBAgACBmwLnvGBhPefcnZoAAQIECBAgsIyAhXWZUQlKYB0BSQkQIECAwJYCFtYtNfUiQIAAAQIECGwnoNN/BSys/4XwFwECBAgQIECAwJwCFtY55yIVgXUEJCVAgAABAoMFLKyDgbUnQIAAAQIECDwjoOa2gIX1to0rBAgQIECAAAECEwhYWCcYgggE1hGQlAABAgQI7C9gYd3f3B0JECBAgACBsws4fyVgYa24FBMgQIAAAQIECOwtsPzCmnz/vuLk9nt7A299v/a7iZPbFsn3a6P7tx5tnrZ/8t0guf1e27/Nn9y+d/L9Wpsn+d4jufneJemutedt87f9k7nyjz7v6v1HzzfpnodkbH07r6TL0/Zv60fPq+3f5le/lsDyC+ta3NISIECAAAEC5xNw4ncFLKzvCvo8AQIECBAgQIDAUAEL61BezQmsIyApAQIECBCYVcDCOutk5CJAgAABAgRWFJB5gICFdQCqlgQIECBAgAABAtsJWFi3s9SJwDoCkhIgQIAAgYUELKwLDUtUAgQIECBAYC4BafYRsLDu4+wuBAgQIECAAAECLwpYWF+E8zEC6whISoAAAQIE1hawsK49P+kJECBAgACBvQTc52MCFtaP0bsxAQIECBAgQIDAMwLLL6yjv2s46b67ORlb/8xQf69pfZIuf9v/92wjfk66/G2GZGz/DfJcktsZ23m19cnteyffr8123jZPW996tv1H18+Wv83T1reebf+2vs0zuj75/m86uf1ee97kdq/k/WujfUb3TzqD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" alt="Codice QR Sito AGESCI Brancaleone 1" />
+        <span class="qr-card__caption">Inquadrami con la fotocamera</span>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

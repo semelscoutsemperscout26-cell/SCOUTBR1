@@ -43,10 +43,10 @@ const IDENTITY_TABS_DATA = {
     body1:
       "Il nostro appuntamento settimanale è il <strong>sabato pomeriggio, generalmente dalle 16:00 alle 18:00 circa</strong>: il momento in cui ci ritroviamo per giocare, esplorare, imparare nuove competenze, progettare avventure e vivere esperienze che ci aiutano a crescere insieme. La <strong>domenica</strong> ci incontriamo per partecipare alla Santa Messa, alternandoci nelle due parrocchie di Brancaleone.",
     body2:
-      "Periodicamente organizziamo <strong>uscite sul territorio</strong>, indicativamente <strong>una ogni due mesi</strong>. Il momento più atteso dell’anno è il <strong>campo estivo</strong>: il Reparto (11–16 anni) vive generalmente un campo di circa <strong>10–15 giorni in tenda</strong> nei boschi, mentre il Branco (8–11 anni) si ritrova per un’esperienza di circa <strong>7 giorni</strong> in casa di caccia.",
+      "Periodicamente organizziamo <strong>uscite sul territorio</strong>, indicativamente <strong>una ogni due mesi</strong> (le uscite vengono comunicate per tempo alle famiglie). Il momento più atteso dell’anno è il <strong>campo estivo</strong>: il Reparto (11–16 anni) vive generalmente un campo di circa <strong>10–15 giorni in tenda</strong> nei boschi, mentre il Branco (8–11 anni) si ritrova per un’esperienza di circa <strong>7 giorni</strong> in una struttura al chiuso.",
     stats: [
       { title: "Sabato 16:00–18:00", desc: "Attività settimanali + Messa domenicale" },
-      { title: "Campi Estivi", desc: "Reparto 10–15 gg in tenda · Branco 7 gg in casa" },
+      { title: "Campi Estivi", desc: "Reparto 10–15 gg in tenda · Branco 7 gg in struttura al chiuso" },
     ],
   },
   democrazia: {
@@ -69,18 +69,18 @@ const IDENTITY_TABS_DATA = {
 const BRANCHES_INFO = {
   lc: {
     colorKey: "lc",
-    badge: "Branca L/C · 8–11 anni · Branco Waingunga",
+    badge: "Branca indicativa · L/C (8–11 anni) · Branco Waingunga",
     title: "Il Branco dei Lupetti — Imparare giocando nella “Famiglia Felice”",
-    desc: "Dagli 8 agli 11 anni nel nostro Branco Waingunga sia i bambini sia le bambine sono Lupetti! Vivono insieme un ambiente gioioso, accogliente e ricco di fantasia: attraverso il grande gioco, i racconti della Giungla, l’abilità manuale e le Vacanze di Branco estive imparano a fare amicizia con tutti e a conquistare con fierezza le prime piccole autonomie.",
+    desc: "Dagli 8 agli 11 anni nel nostro Branco Waingunga sia i bambini sia le bambine sono Lupetti! Vivono insieme un ambiente gioioso, accogliente e ricco di fantasia: attraverso il gioco, l’ambiente fantastico Giungla, la libera espressione e le Vacanze di Branco estive imparano a fare amicizia con tutti e a conquistare con fierezza le prime piccole autonomie.",
     keyword: "“Del nostro meglio!” · Gioco e Gioia",
-    growth: "Socialità, fantasia, rispetto degli altri e fiducia in sé",
+    growth: "Amicizia, fantasia, rispetto degli altri e fiducia in sé",
     photo: "../branco info/WhatsApp Image 2026-11-01 at 11.05.29 PM (5).jpeg",
     photoCaption: "Il nostro Branco Waingunga affacciato sul mare Jonio con le magliette gialle della Famiglia Felice",
     formValue: "Branco Lupetti (8-11 anni)",
   },
   eg: {
     colorKey: "eg",
-    badge: "Branca E/G · 11–16 anni",
+    badge: "Branca indicativa · E/G (11–16 anni)",
     title: "Reparto (Esploratori e Guide) — L’età della grande avventura",
     desc: "Dagli 11 ai 16 anni ragazzi e ragazze sono veri protagonisti nella propria Squadriglia! Costruiscono tavoli da campo con nodi e legature, montano la tenda, cucinano, accendono il fuoco in sicurezza, viaggiano fino a Roma e mettono in campo la propria creatività — proprio come hanno fatto ideando le scene del nostro video!",
     keyword: "“Estote Parati” (Siate Pronti) · Avventura",
@@ -91,7 +91,7 @@ const BRANCHES_INFO = {
   },
   rs: {
     colorKey: "rs",
-    badge: "Branca R/S · 16–21 anni",
+    badge: "Branca indicativa · R/S (16–21 anni)",
     title: "Noviziato e Clan/Fuoco (Rover e Scolte) — Strada, Comunità e Servizio",
     desc: "Dai 16 ai 21 anni i giovani camminano zaino in spalla lungo i sentieri dell’Aspromonte e d’Italia (le Route), custodiscono la Forcola e la Carta di Clan, si confrontano sui grandi temi della vita e della fede e vivono il servizio gratuito verso il prossimo, preparandosi a scelte mature da cittadini attivi.",
     keyword: "“Servire” · Strada, Comunità e Scelte",
@@ -573,11 +573,20 @@ function initAgeExplorer() {
     const info = BRANCHES_INFO[key];
     if (!info) return;
 
+    let transitionNote = "";
+    if (age === 11 || age === 12) {
+      transitionNote =
+        " L’associazione con l’età è indicativa: intorno agli 11–12 anni ci si può trovare ancora nel Branco oppure già vicini al passaggio in Reparto, in base alla situazione individuale e al percorso scout.";
+    } else if (age === 16 || age === 17) {
+      transitionNote =
+        " L’associazione con l’età è indicativa: intorno ai 16–17 anni il passaggio tra Reparto e Noviziato R/S viene valutato insieme ai Capi in base alla situazione individuale e al percorso scout.";
+    }
+
     if (ageDisplay) ageDisplay.textContent = `${age} anni`;
     if (showcase) showcase.setAttribute("data-branch-color", info.colorKey);
     if (badgeEl) badgeEl.textContent = info.badge;
     if (titleEl) titleEl.textContent = info.title;
-    if (descEl) descEl.textContent = info.desc;
+    if (descEl) descEl.textContent = info.desc + transitionNote;
     if (keywordEl) keywordEl.textContent = info.keyword;
     if (growthEl) growthEl.textContent = info.growth;
     if (photoEl && photoEl.getAttribute("src") !== info.photo) {
@@ -587,7 +596,7 @@ function initAgeExplorer() {
     if (ctaBtn) {
       const shortName =
         key === "lc" ? "il Branco dei Lupetti" : key === "eg" ? "il Reparto" : "il Clan/Fuoco";
-      ctaBtn.textContent = `Scopri ${shortName} (${age} anni) →`;
+      ctaBtn.textContent = `Scopri ${shortName} →`;
       ctaBtn.href = key === "lc" ? "branco.html" : key === "eg" ? "reparto.html" : "clan.html";
     }
 
