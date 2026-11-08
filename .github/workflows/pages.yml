@@ -27,6 +27,7 @@ jobs:
         run: |
           mkdir -p _site
           cp -r "codice" "branco info" "Reparto info" "Clan info" _site/
+          cp google34af5a08b59cd785.html _site/
           touch _site/.nojekyll
           cat << 'EOF' > _site/index.html
           <!DOCTYPE html>
