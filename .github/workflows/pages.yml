@@ -34,15 +34,45 @@ jobs:
           <head>
             <meta charset="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <title>Gruppo Scout AGESCI Brancaleone 1</title>
+            <title>AGESCI Brancaleone 1 (BR1) — Gruppo Scout a Brancaleone (RC)</title>
+            <meta name="description" content="Sito ufficiale del Gruppo Scout AGESCI Brancaleone 1 (AGESCI BR1): scout a Brancaleone (RC) dagli 8 ai 21 anni. Branco Lupetti, Reparto Esploratori e Guide, Clan Rover e Scolte." />
+            <meta name="keywords" content="AGESCI BR1, AGESCI Brancaleone 1, Brancaleone 1, Brancaleone Scout, Scout Brancaleone, Gruppo Scout Brancaleone" />
+            <meta name="robots" content="index, follow" />
+            <link rel="canonical" href="https://semelscoutsemperscout26-cell.github.io/SCOUTBR1/codice/index.html" />
             <meta http-equiv="refresh" content="0; url=codice/index.html" />
-            <link rel="canonical" href="codice/index.html" />
             <script>window.location.replace("codice/index.html");</script>
           </head>
           <body>
-            <p>Reindirizzamento al sito <a href="codice/index.html">AGESCI Brancaleone 1</a>...</p>
+            <h1>Gruppo Scout AGESCI Brancaleone 1 (AGESCI BR1) — Scout a Brancaleone</h1>
+            <p>Vai al sito ufficiale: <a href="codice/index.html">Gruppo Scout AGESCI Brancaleone 1 (BR1)</a>.</p>
           </body>
           </html>
+          EOF
+          cat << 'EOF' > _site/robots.txt
+          User-agent: *
+          Allow: /
+          Sitemap: https://semelscoutsemperscout26-cell.github.io/SCOUTBR1/sitemap.xml
+          EOF
+          cat << 'EOF' > _site/sitemap.xml
+          <?xml version="1.0" encoding="UTF-8"?>
+          <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+            <url>
+              <loc>https://semelscoutsemperscout26-cell.github.io/SCOUTBR1/codice/index.html</loc>
+              <priority>1.0</priority>
+            </url>
+            <url>
+              <loc>https://semelscoutsemperscout26-cell.github.io/SCOUTBR1/codice/branco.html</loc>
+              <priority>0.8</priority>
+            </url>
+            <url>
+              <loc>https://semelscoutsemperscout26-cell.github.io/SCOUTBR1/codice/reparto.html</loc>
+              <priority>0.8</priority>
+            </url>
+            <url>
+              <loc>https://semelscoutsemperscout26-cell.github.io/SCOUTBR1/codice/clan.html</loc>
+              <priority>0.8</priority>
+            </url>
+          </urlset>
           EOF
 
       - name: Verifica attivazione GitHub Pages
